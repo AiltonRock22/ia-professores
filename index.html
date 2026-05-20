@@ -51,9 +51,10 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <!-- Logo e Título -->
             <div class="flex items-center gap-3 cursor-pointer select-none" onclick="switchTab('inicio')">
-                <div class="relative w-12 h-12 rounded-full overflow-hidden bg-eduBlue-600 flex items-center justify-center border-2 border-white shrink-0">
-                    <img src="seu-logo.png" alt="Logo" class="w-full h-full object-cover" onerror="this.style.display='none'; document.getElementById('logo-placeholder').style.display='flex';">
-                    <div id="logo-placeholder" class="hidden absolute inset-0 items-center justify-center text-white font-bold text-lg">🎓</div>
+                <div class="relative w-12 h-12 rounded-full overflow-hidden bg-white flex items-center justify-center border-2 border-white shrink-0">
+                    <!-- Usando o link definitivo do GitHub fornecido pelo Prof. Ailton -->
+                    <img src="https://raw.githubusercontent.com/AiltonRock22/ia-professores/refs/heads/main/logo_fel%C3%ADcio%20(265%20x%20256%20px).png" alt="Logo EEFPA" class="w-full h-full object-contain" onerror="this.style.display='none'; document.getElementById('logo-placeholder').style.display='flex';">
+                    <div id="logo-placeholder" class="hidden absolute inset-0 bg-eduBlue-600 items-center justify-center text-white font-bold text-lg">🎓</div>
                 </div>
                 <div>
                     <h1 class="text-sm sm:text-base font-bold tracking-tight leading-tight">Docente Ativo • EEFPA</h1>
@@ -246,7 +247,7 @@
                         <span class="text-deepseek text-xs font-bold flex items-center gap-1 mt-4 group-hover:underline">Abrir Guia DeepSeek <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></span>
                     </div>
 
-                    <!-- Card Manus IA (NOVO) -->
+                    <!-- Card Manus IA -->
                     <div onclick="switchTab('manus')" class="bg-white rounded-xl p-6 shadow-sm border border-slate-100 hover:shadow-md hover:border-manus transition-all cursor-pointer group flex flex-col justify-between">
                         <div>
                             <div class="w-12 h-12 rounded-lg bg-violet-50 text-manus flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
@@ -434,7 +435,7 @@
                             </button>
                         </div>
                         <div class="p-5">
-                            <pre id="prompt-copilot1" class="text-sm text-slate-800 whitespace-pre-wrap font-mono bg-slate-900 text-emerald-400 p-4 rounded-lg overflow-x-auto">Gere uma ilustração vetorial em preto e branco (estilo desenho de colorir para school) de [INSIRA O ITEM EX: o mito socrático da caverna adaptado ao uso de smartphones]. Garanta contornos nítidos e fundo totalmente limpo para facilitar a impressão.</pre>
+                            <pre id="prompt-copilot1" class="text-sm text-slate-800 whitespace-pre-wrap font-mono bg-slate-900 text-emerald-400 p-4 rounded-lg overflow-x-auto">Gere uma ilustração vetorial em preto e branco (estilo desenho de colorir para escola) de [INSIRA O ITEM EX: o mito socrático da caverna adaptado ao uso de smartphones]. Garanta contornos nítidos e fundo totalmente limpo para facilitar a impressão.</pre>
                         </div>
                     </div>
                 </div>
@@ -626,7 +627,7 @@ Compile o resultado em formato de tabela com as seguintes colunas:
             </div>
         </section>
 
-        <!-- ================= PÁGINA: COMPARTILHAR (NOVA!) ================= -->
+        <!-- ================= PÁGINA: COMPARTILHAR ================= -->
         <section id="compartilhar" class="tab-content space-y-8">
             <div class="border-b border-slate-200 pb-5">
                 <div class="flex items-center gap-3">
