@@ -52,7 +52,7 @@
             <!-- Logo e Título -->
             <div class="flex items-center gap-3 cursor-pointer select-none" onclick="switchTab('inicio')">
                 <div class="relative w-12 h-12 rounded-full overflow-hidden bg-white flex items-center justify-center border-2 border-white shrink-0">
-                    <!-- Usando o link definitivo do GitHub fornecido pelo Prof. Ailton -->
+                    <!-- Link definitivo do GitHub fornecido pelo Prof. Ailton -->
                     <img src="https://raw.githubusercontent.com/AiltonRock22/ia-professores/refs/heads/main/logo_fel%C3%ADcio%20(265%20x%20256%20px).png" alt="Logo EEFPA" class="w-full h-full object-contain" onerror="this.style.display='none'; document.getElementById('logo-placeholder').style.display='flex';">
                     <div id="logo-placeholder" class="hidden absolute inset-0 bg-eduBlue-600 items-center justify-center text-white font-bold text-lg">🎓</div>
                 </div>
@@ -62,7 +62,7 @@
                 </div>
             </div>
 
-            <!-- Links de Navegação (Desktop) - Ajustado com rolagem horizontal automática caso falte espaço -->
+            <!-- Links de Navegação (Desktop) -->
             <nav class="hidden lg:flex items-center space-x-1 overflow-x-auto py-2 max-w-full">
                 <button onclick="switchTab('inicio')" class="nav-btn px-2.5 py-1.5 rounded-md text-xs font-semibold hover:bg-eduBlue-800 transition-colors shrink-0" data-tab="inicio">Início</button>
                 <button onclick="switchTab('chatgpt')" class="nav-btn px-2.5 py-1.5 rounded-md text-xs font-semibold text-slate-300 hover:text-white hover:bg-eduBlue-800 transition-colors shrink-0" data-tab="chatgpt">ChatGPT</button>
@@ -581,11 +581,11 @@ Indique de forma lógica se há furos na pergunta, dubiedade que dê margem para
                     </div>
 
                     <div class="bg-red-50 p-6 rounded-xl border border-red-200">
-                        <h4 class="font-bold text-red-900 text-base flex items-center gap-1">
+                        <h4 class="font-bold text-red-950 text-base flex items-center gap-1">
                             <i data-lucide="shield-alert" class="w-5 h-5 text-red-600"></i> Alerta Crítico (Filosofia do Cuidado):
                         </h4>
                         <p class="text-xs text-red-950 mt-2 leading-relaxed">
-                            Por agir de forma autônoma (executando sub-tarefas por conta própria), o Manus IA pode "alucinar" referências inteiras e criar fontes fictícias para justificar os dados compilados se não houver um comando estrito de verificação manual por parte do professor.
+                            Por agir de forma autônoma (executando sub-tarefas por conta própria), o Manus IA pode "alucinar" referências inteiras e creater fontes fictícias para justificar os dados compilados se não houver um comando estrito de verificação manual por parte do professor.
                         </p>
                     </div>
                 </div>
@@ -627,118 +627,53 @@ Compile o resultado em formato de tabela com as seguintes colunas:
             </div>
         </section>
 
-        <!-- ================= PÁGINA: COMPARTILHAR ================= -->
+        <!-- ================= PÁGINA: COMPARTILHAR (COM GOOGLE FORMS INTEGRADO) ================= -->
         <section id="compartilhar" class="tab-content space-y-8">
             <div class="border-b border-slate-200 pb-5">
                 <div class="flex items-center gap-3">
                     <span class="p-3 bg-amber-50 text-amber-600 rounded-xl"><i data-lucide="messages-square" class="w-8 h-8"></i></span>
                     <div>
                         <h2 class="text-3xl font-extrabold text-slate-900">Espaço de Partilha Pedagógica</h2>
-                        <p class="text-slate-600">Registre sua experiência de uso de IA na EEFPA para inspirar outros professores.</p>
+                        <p class="text-slate-600">Sua experiência real na EEFPA registrando ideias e usos inovadores de IA.</p>
                     </div>
                 </div>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                <!-- Explicação do Espaço Colaborativo -->
-                <div class="space-y-6 lg:col-span-1">
+            <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+                <!-- Painel Lateral: Instruções e Detalhes da Partilha -->
+                <div class="lg:col-span-1 space-y-6">
                     <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm space-y-4">
-                        <h4 class="font-bold text-lg text-slate-900">Por que compartilhar?</h4>
-                        <p class="text-sm text-slate-600 leading-relaxed">
-                            A transformação educacional de Montes Claros ocorre pela troca de saberes. Quando você documenta como adaptou uma aula de Geografia, Matemática ou Língua Portuguesa usando IA, outro professor pode replicar seu sucesso.
+                        <h4 class="font-bold text-base text-slate-900 flex items-center gap-1.5">
+                            <i data-lucide="heart" class="text-rose-500 w-5 h-5"></i> Força Coletiva
+                        </h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            O saber cresce na partilha! Preencha ao lado o formulário oficial que o **Prof. Ailton** organizou para nosso mini-curso. 
                         </p>
-                        <div class="p-3.5 bg-slate-50 rounded-lg text-xs border border-slate-200 flex items-start gap-2">
-                            <i data-lucide="lightbulb" class="text-amber-500 w-5 h-5 shrink-0 mt-0.5"></i>
-                            <span class="text-slate-600 leading-relaxed"><strong>Filosofia de Comunidade:</strong> O conhecimento cresce quando é partilhado, desmistificando medos coletivos sobre tecnologias complexas.</span>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Seus relatos serão fundamentais para consolidarmos um banco sólido de exemplos práticos em Montes Claros.
+                        </p>
+                        <div class="p-3 bg-amber-50 rounded-lg text-[11px] border border-amber-200/50 flex items-start gap-2">
+                            <i data-lucide="lock" class="text-amber-600 w-4 h-4 shrink-0 mt-0.5"></i>
+                            <span class="text-amber-950 leading-tight">**Lembrete de Privacidade:** Evite digitar nomes de estudantes menores de idade nas perguntas abertas de descrição.</span>
                         </div>
                     </div>
 
-                    <!-- Opção de Integração de Iframe / Forms Externo -->
-                    <div class="bg-eduBlue-50 p-6 rounded-xl border border-eduBlue-200 shadow-sm space-y-3">
-                        <h4 class="font-bold text-eduBlue-800 text-sm flex items-center gap-1">
-                            <i data-lucide="external-link" class="w-4 h-4"></i> Integração com Google Forms
-                        </h4>
-                        <p class="text-xs text-slate-700 leading-relaxed">
-                            <strong>Dica para o Prof. Ailton:</strong> Se você criar um formulário oficial no Google Forms para coletar as práticas, poderá embutir o link diretamente ou substituir esta caixa por um <code>&lt;iframe&gt;</code> para carregar o formulário inteiro direto aqui!
-                        </p>
-                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfJVaolpLT1JLnuO4ZNgsrJHQPK_wI1iXKETZtQfhGilbE4Qw/viewform?usp=dialog" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-bold text-eduBlue-600 hover:underline">
-                            Ir para o Google Forms <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+                    <!-- Link alternativo de acesso -->
+                    <div class="bg-eduBlue-50 p-5 rounded-xl border border-eduBlue-200 text-center space-y-3">
+                        <p class="text-xs text-eduBlue-900 leading-relaxed font-semibold">Teve problemas com o carregamento na página?</p>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfJVaolpLT1JLnuO4ZNgsrJHQPK_wI1iXKETZtQfhGilbE4Qw/viewform?usp=dialog" target="_blank" class="w-full bg-eduBlue-600 hover:bg-eduBlue-800 text-white font-bold py-2 px-4 rounded-lg text-xs transition-colors flex items-center justify-center gap-1 shadow-sm">
+                            <i data-lucide="external-link" class="w-3.5 h-3.5"></i> Abrir em nova aba
                         </a>
                     </div>
                 </div>
 
-                <!-- Formulário de Envio Interno Integrado -->
-                <div class="lg:col-span-2 space-y-6">
-                    <div class="bg-white rounded-xl border border-slate-100 shadow-sm p-6 sm:p-8">
-                        <h3 class="font-bold text-xl text-slate-900 mb-6 flex items-center gap-2">
-                            <i data-lucide="form-input" class="text-amber-600"></i> Formulário de Registro de Práticas
-                        </h3>
-                        
-                        <!-- Caixa de Sucesso Simulada (Substitui alerta) -->
-                        <div id="form-success-box" class="hidden bg-emerald-50 border border-emerald-200 rounded-xl p-6 text-center space-y-3 mb-6 animate-pulse">
-                            <div class="w-12 h-12 rounded-full bg-emerald-500 text-white flex items-center justify-center mx-auto text-xl shadow-md">✓</div>
-                            <h4 class="font-bold text-emerald-950 text-base">Excelente Contribuição!</h4>
-                            <p class="text-xs text-emerald-900 leading-relaxed max-w-md mx-auto">
-                                Sua prática pedagógica com IA foi registrada no sistema interno com sucesso e será analisada para ser exposta no mural físico de práticas inovadoras da EEFPA!
-                            </p>
-                            <button onclick="resetSimulatedForm()" class="mt-2 text-xs font-bold text-emerald-700 hover:underline">Enviar outra contribuição</button>
+                <!-- Google Forms Embutido de forma Responsiva -->
+                <div class="lg:col-span-3">
+                    <div class="bg-white rounded-xl border border-slate-100 shadow-sm overflow-hidden p-2 sm:p-4">
+                        <div class="w-full relative" style="padding-top: 130%; min-height: 800px;">
+                            <!-- Iframe embutindo diretamente o Google Forms com suporte a viewport móvel -->
+                            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfJVaolpLT1JLnuO4ZNgsrJHQPK_wI1iXKETZtQfhGilbE4Qw/viewform?embedded=true" class="absolute inset-0 w-full h-full border-0 rounded-lg bg-slate-50" allowfullscreen>Carregando formulário oficial da EEFPA...</iframe>
                         </div>
-
-                        <!-- O Formulário de Fato -->
-                        <form id="teacher-contrib-form" onsubmit="handleFormSubmission(event)" class="space-y-5">
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-                                <div>
-                                    <label class="block text-xs font-bold text-slate-600 uppercase mb-2">Seu Nome Completo:</label>
-                                    <input type="text" required placeholder="Ex: Prof. Maria Souza" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-amber-500">
-                                </div>
-                                <div>
-                                    <label class="block text-xs font-bold text-slate-600 uppercase mb-2">Sua Disciplina / Atuação:</label>
-                                    <input type="text" required placeholder="Ex: Língua Portuguesa / Hist." class="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-amber-500">
-                                </div>
-                            </div>
-
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-                                <div>
-                                    <label class="block text-xs font-bold text-slate-600 uppercase mb-2">Segmento de Aula:</label>
-                                    <select required class="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-amber-500">
-                                        <option value="">Selecione...</option>
-                                        <option value="fundamental">Ensino Fundamental II</option>
-                                        <option value="medio">Ensino Médio Integral</option>
-                                        <option value="eja">EJA (Educação de Jovens e Adultos)</option>
-                                        <option value="outro">Outro Segmento</option>
-                                    </select>
-                                </div>
-                                <div>
-                                    <label class="block text-xs font-bold text-slate-600 uppercase mb-2">IA Utilizada na Atividade:</label>
-                                    <select required class="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-amber-500">
-                                        <option value="">Selecione...</option>
-                                        <option value="chatgpt">ChatGPT</option>
-                                        <option value="gemini">Google Gemini</option>
-                                        <option value="copilot">Microsoft Copilot</option>
-                                        <option value="notebooklm">NotebookLM</option>
-                                        <option value="deepseek">DeepSeek</option>
-                                        <option value="manus">Manus IA</option>
-                                        <option value="outra">Outra Inteligência Artificial</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div>
-                                <label class="block text-xs font-bold text-slate-600 uppercase mb-2">Descrição Prática da Atividade (Ideia/Prompt):</label>
-                                <textarea required rows="5" placeholder="Descreva brevemente como utilizou a IA. Ex: 'Utilizei o ChatGPT para gerar 3 dilemas de informática ecológica para os alunos resolverem em trios...'" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-amber-500"></textarea>
-                            </div>
-
-                            <div class="flex items-center gap-2">
-                                <input type="checkbox" required id="lgpd-agreement" class="rounded text-amber-600 focus:ring-amber-500">
-                                <label for="lgpd-agreement" class="text-xs text-slate-500">
-                                    Confirmo que não incluí dados pessoais de menores de idade no relato acima (conforme regras de privacidade).
-                                </label>
-                            </div>
-
-                            <button type="submit" class="w-full bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-6 rounded-lg shadow transition-colors flex items-center justify-center gap-2">
-                                <i data-lucide="send" class="w-4 h-4"></i> Enviar Contribuição
-                            </button>
-                        </form>
                     </div>
                 </div>
             </div>
@@ -766,7 +701,7 @@ Compile o resultado em formato de tabela com as seguintes colunas:
                         Nunca submeta redações contendo nomes de estudantes, diários de classe, fotos de menores de idade ou relatórios de comportamento em chats públicos. Essas informações passam a ser indexadas pelas IAs abertas para treinamento futuro.
                     </p>
                     <p class="text-sm text-slate-600 leading-relaxed">
-                        <strong>Dica de Prática:</strong> Se precisar que uma IA corrija o rascunho de um estudante, copie o texto puro desprovido de qualquer nome ou identificação do colégio e da série.
+                        <strong>Dica de Prática:</strong> Se precisar que uma IA corrigja o rascunho de um estudante, copie o texto puro desprovido de qualquer nome ou identificação do colégio e da série.
                     </p>
                 </div>
 
@@ -862,28 +797,6 @@ Compile o resultado em formato de tabela com as seguintes colunas:
                 toast.classList.remove('translate-y-0', 'opacity-100');
                 toast.classList.add('translate-y-20', 'opacity-0');
             }, 3000);
-        }
-
-        // Lógica de Submissão do Formulário de Professores
-        function handleFormSubmission(event) {
-            event.preventDefault(); // Impede recarregamento real da página
-            
-            // Oculta o formulário de forma amigável
-            document.getElementById('teacher-contrib-form').classList.add('hidden');
-            
-            // Exibe a caixa de sucesso
-            const successBox = document.getElementById('form-success-box');
-            successBox.classList.remove('hidden');
-            
-            // Rola suavemente até o topo do card para focar na mensagem de sucesso
-            successBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }
-
-        // Restaurar formulário para novos envios
-        function resetSimulatedForm() {
-            document.getElementById('teacher-contrib-form').reset();
-            document.getElementById('teacher-contrib-form').classList.remove('hidden');
-            document.getElementById('form-success-box').classList.add('hidden');
         }
 
         // Inicializar ícones Lucide
