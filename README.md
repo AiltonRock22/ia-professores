@@ -26,7 +26,19 @@ O projeto foi desenvolvido pelo **Prof. Ailton** (Filosofia & Informática) como
 
 ## 🚀 Demonstração
 
-![Preview do Portal](https://placehold.co/800x400/1E40AF/white?text=Preview+do+Portal+IA+Educação)
+<table align="center">
+  <tr>
+    <td align="center">
+      <img src="https://raw.githubusercontent.com/AiltonRock22/ia-professores/refs/heads/main/screencapture-ailtonrock22-github-io-ia-professores-2026-05-20-17_24_42.png" 
+           alt="Preview do Portal IA na Educação" 
+           width="650" 
+           style="border-radius: 16px; border: 3px solid #e2e8f0;">
+      <br>
+      <em>📸 Interface principal do portal - Clique para ampliar</em>
+    </td>
+  </tr>
+</table>
+
 
 ## 🛠️ Tecnologias Utilizadas
 
