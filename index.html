@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-PT">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mini-Curso: IA na Educação - EEFPA</title>
+    <!-- Tailwind CSS para design responsivo e moderno -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -28,6 +29,7 @@
             }
         }
     </script>
+    <!-- Lucide Icons para ícones modernos -->
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         /* Transição suave para navegação */
@@ -56,10 +58,13 @@
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans min-h-screen flex flex-col justify-between">
 
+    <!-- CABEÇALHO / NAVEGAÇÃO -->
     <header class="bg-eduBlue-900 text-white sticky top-0 z-50 shadow-md">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo e Título -->
             <div class="flex items-center gap-3 cursor-pointer select-none" onclick="switchTab('inicio')">
                 <div class="relative w-12 h-12 rounded-full overflow-hidden bg-white flex items-center justify-center border-2 border-white shrink-0">
+                    <!-- Link do logo no GitHub -->
                     <img src="https://raw.githubusercontent.com/AiltonRock22/ia-professores/refs/heads/main/logo_fel%C3%ADcio%20(265%20x%20256%20px).png" alt="Logo EEFPA" class="w-full h-full object-contain" onerror="this.style.display='none'; document.getElementById('logo-placeholder').style.display='flex';">
                     <div id="logo-placeholder" class="hidden absolute inset-0 bg-eduBlue-600 items-center justify-center text-white font-bold text-lg">🎓</div>
                 </div>
@@ -69,6 +74,7 @@
                 </div>
             </div>
 
+            <!-- Links de Navegação (Desktop) -->
             <nav class="hidden lg:flex items-center space-x-1 overflow-x-auto py-2 max-w-full">
                 <button onclick="switchTab('inicio')" class="nav-btn px-2.5 py-1.5 rounded-md text-xs font-semibold hover:bg-eduBlue-800 transition-colors shrink-0" data-tab="inicio">Início</button>
                 <button onclick="switchTab('notebooklm')" class="nav-btn px-2.5 py-1.5 rounded-md text-xs font-semibold text-slate-300 hover:text-white hover:bg-eduBlue-800 transition-colors shrink-0" data-tab="notebooklm">NotebookLM</button>
@@ -106,8 +112,10 @@
         <span class="text-sm font-medium">Prompt copiado com sucesso!</span>
     </div>
 
+    <!-- CONTEÚDO PRINCIPAL -->
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-grow w-full">
         
+        <!-- ================= PÁGINA INICIAL (PORTAL) ================= -->
         <section id="inicio" class="tab-content active space-y-8">
             <div class="bg-gradient-to-r from-eduBlue-800 to-eduBlue-600 rounded-2xl p-6 sm:p-10 text-white shadow-xl relative overflow-hidden">
                 <div class="relative z-10 max-w-3xl">
@@ -118,7 +126,7 @@
                         Inteligência Artificial na Educação: Teoria, Prática e Ética
                     </h2>
                     <p class="mt-4 text-sm sm:text-base md:text-lg text-eduBlue-50/90">
-                        Bem-vindos ao nosso portal de Engenharia de Prompts! Este espaço foi totalmente calibrado e otimizado para a rotina pedagógica real dos professores da **EEFPA**. Acesse os guias específicos acima para copiar modelos focados nas maiores vocações de cada inteligência artificial.
+                        Bem-vindos ao nosso portal de Engenharia de Prompts! Este espaço foi totalmente calibrado e otimizado para a rotina pedagógica real dos professores da **EEFPA**. Aceda aos guias específicos acima para copiar modelos focados nas maiores vocações de cada inteligência artificial.
                     </p>
                     <div class="mt-6 flex flex-wrap gap-4 items-center">
                         <div class="flex items-center gap-2 text-xs sm:text-sm bg-eduBlue-900/40 px-3 py-1.5 rounded-lg border border-white/10">
@@ -129,6 +137,73 @@
                 </div>
             </div>
 
+            <!-- Dados Rápidos da Escola -->
+            <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-100 grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="flex items-center gap-3">
+                    <div class="p-3 bg-blue-50 text-eduBlue-600 rounded-lg">
+                        <i data-lucide="map-pin" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-xs font-bold text-slate-400 uppercase">Localização</h4>
+                        <p class="text-sm font-semibold text-slate-800">R. Professor Genaldo, 475. Sumaré</p>
+                        <p class="text-xs text-slate-500">Montes Claros / MG</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3">
+                    <div class="p-3 bg-emerald-50 text-emerald-600 rounded-lg">
+                        <i data-lucide="users" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-xs font-bold text-slate-400 uppercase">Modalidades</h4>
+                        <p class="text-sm font-semibold text-slate-800">Fund. II, Médio Integral e EJA</p>
+                        <p class="text-xs text-slate-500">Formação Adaptável</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3">
+                    <div class="p-3 bg-purple-50 text-purple-600 rounded-lg">
+                        <i data-lucide="phone" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-xs font-bold text-slate-400 uppercase">Contato Secretaria</h4>
+                        <p class="text-sm font-semibold text-slate-800">3223-8633</p>
+                        <p class="text-xs text-slate-500">Dúvidas administrativas</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chamada para a nova área de Infográficos -->
+            <div class="bg-gradient-to-r from-sky-50 to-blue-50 rounded-xl p-6 border border-sky-200/60 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-4">
+                    <div class="p-3 bg-sky-600 text-white rounded-xl shadow-md shrink-0">
+                        <i data-lucide="image" class="w-7 h-7"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-950 text-lg">Guias e Infográficos Visuais</h4>
+                        <p class="text-slate-700 text-sm mt-1">Aceda aos resumos gráficos para aprender a estruturar prompts ideais, regras cruciais de uso ético e reflexões conscientes em sala de aula.</p>
+                    </div>
+                </div>
+                <button onclick="switchTab('infograficos')" class="bg-sky-600 hover:bg-sky-700 text-white font-bold px-6 py-3 rounded-lg shadow-md transition-all flex items-center gap-2 shrink-0">
+                    <i data-lucide="eye" class="w-5 h-5"></i> Abrir Infográficos
+                </button>
+            </div>
+
+            <!-- Bloco de chamada para contribuições dos professores no início -->
+            <div class="bg-gradient-to-r from-amber-50 to-orange-50 rounded-xl p-6 border border-amber-200/60 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-4">
+                    <div class="p-3 bg-amber-500 text-white rounded-xl shadow-md shrink-0">
+                        <i data-lucide="messages-square" class="w-7 h-7"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-amber-950 text-lg">Espaço Colaborativo EEFPA</h4>
+                        <p class="text-amber-900 text-sm mt-1">Querido professor, você já utilizou alguma Inteligência Artificial de forma criativa com seus alunos? Compartilhe seu exemplo para enriquecermos nosso banco de saberes!</p>
+                    </div>
+                </div>
+                <button onclick="switchTab('compartilhar')" class="bg-amber-600 hover:bg-amber-700 text-white font-bold px-6 py-3 rounded-lg shadow-md transition-all flex items-center gap-2 shrink-0">
+                    <i data-lucide="plus-circle" class="w-5 h-5"></i> Compartilhar Agora
+                </button>
+            </div>
+
+            <!-- Grid de Seleção das Ferramentas com as suas respetivas forças -->
             <div class="space-y-6">
                 <h3 class="text-xl font-bold text-slate-900">Selecione a IA de acordo com a sua necessidade de trabalho:</h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -139,7 +214,7 @@
                                 <i data-lucide="file-text" class="w-6 h-6"></i>
                             </div>
                             <h4 class="font-bold text-lg text-slate-900 group-hover:text-notebooklm transition-colors">NotebookLM</h4>
-                            <p class="text-slate-600 text-sm mt-2"><strong>Melhor para:</strong> Cruzar Livro Didático com o CRMG, gerar sequências didáticas baseadas em páginas e atividades de pesquisa no livro.</p>
+                            <p class="text-slate-600 text-sm mt-2"><strong>Vocação:</strong> Cruzar Livro Didático com o CRMG, gerar sequências didáticas baseadas em páginas e atividades de pesquisa no livro.</p>
                         </div>
                         <span class="text-notebooklm text-xs font-bold flex items-center gap-1 mt-4 group-hover:underline">Abrir Guia NotebookLM <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></span>
                     </div>
@@ -150,7 +225,7 @@
                                 <i data-lucide="sparkles" class="w-6 h-6"></i>
                             </div>
                             <h4 class="font-bold text-lg text-slate-900 group-hover:text-gemini transition-colors">Google Gemini</h4>
-                            <p class="text-slate-600 text-sm mt-2"><strong>Melhor para:</strong> Preencher planejamentos prontos estruturados em tabelas e mapear/respeitar códigos de habilidades do CRMG.</p>
+                            <p class="text-slate-600 text-sm mt-2"><strong>Vocação:</strong> Preencher planejamentos prontos estruturados em tabelas e mapear/respeitar códigos de habilidades do CRMG.</p>
                         </div>
                         <span class="text-gemini text-xs font-bold flex items-center gap-1 mt-4 group-hover:underline">Abrir Guia Gemini <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></span>
                     </div>
@@ -161,7 +236,7 @@
                                 <i data-lucide="brain" class="w-6 h-6"></i>
                             </div>
                             <h4 class="font-bold text-lg text-slate-900 group-hover:text-deepseek transition-colors">DeepSeek</h4>
-                            <p class="text-slate-600 text-sm mt-2"><strong>Melhor para:</strong> Resumos rápidos de livros em tópicos, correção de redações/questões abertas e digitalização de livros via OCR.</p>
+                            <p class="text-slate-600 text-sm mt-2"><strong>Vocação:</strong> Resumos rápidos de livros em tópicos, correção de redações/questões abertas e digitalização de livros via OCR.</p>
                         </div>
                         <span class="text-deepseek text-xs font-bold flex items-center gap-1 mt-4 group-hover:underline">Abrir Guia DeepSeek <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></span>
                     </div>
@@ -172,7 +247,7 @@
                                 <i data-lucide="bot" class="w-6 h-6"></i>
                             </div>
                             <h4 class="font-bold text-lg text-slate-900 group-hover:text-chatgpt transition-colors">ChatGPT</h4>
-                            <p class="text-slate-600 text-sm mt-2"><strong>Melhor para:</strong> Dúvidas gerais e geração de imagens didáticas e ilustrações conceituais de Filosofia/Informática.</p>
+                            <p class="text-slate-600 text-sm mt-2"><strong>Vocação:</strong> Dúvidas gerais e geração de imagens didáticas e ilustrações conceituais de Filosofia/Informática.</p>
                         </div>
                         <span class="text-chatgpt text-xs font-bold flex items-center gap-1 mt-4 group-hover:underline">Abrir Guia ChatGPT <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></span>
                     </div>
@@ -183,7 +258,7 @@
                                 <i data-lucide="wand-2" class="w-6 h-6"></i>
                             </div>
                             <h4 class="font-bold text-lg text-slate-900 group-hover:text-manus transition-colors">Manus IA</h4>
-                            <p class="text-slate-600 text-sm mt-2"><strong>Melhor para:</strong> Gerar ótimos resumos e imagens baseados estritamente em textos e PDFs enviados.</p>
+                            <p class="text-slate-600 text-sm mt-2"><strong>Vocação:</strong> Gerar ótimos resumos e roteiros estruturados de slides baseados em textos e PDFs enviados.</p>
                         </div>
                         <span class="text-manus text-xs font-bold flex items-center gap-1 mt-4 group-hover:underline">Abrir Guia Manus IA <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></span>
                     </div>
@@ -194,7 +269,7 @@
                                 <i data-lucide="mic" class="w-6 h-6"></i>
                             </div>
                             <h4 class="font-bold text-lg text-slate-900 group-hover:text-copilot transition-colors">Microsoft Copilot</h4>
-                            <p class="text-slate-600 text-sm mt-2"><strong>Melhor para:</strong> Correção linguística e conversação por voz em tempo real para tirar dúvidas rápidas.</p>
+                            <p class="text-slate-600 text-sm mt-2"><strong>Vocação:</strong> Correção linguística e conversação por voz em tempo real para tirar dúvidas rápidas.</p>
                         </div>
                         <span class="text-copilot text-xs font-bold flex items-center gap-1 mt-4 group-hover:underline">Abrir Guia Copilot <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></span>
                     </div>
@@ -203,6 +278,7 @@
             </div>
         </section>
 
+        <!-- ================= PÁGINA: NOTEBOOKLM ================= -->
         <section id="notebooklm" class="tab-content space-y-8">
             <div class="border-b border-slate-200 pb-5">
                 <div class="flex items-center gap-3">
@@ -214,16 +290,54 @@
                 </div>
             </div>
 
-            <div class="space-y-6">
-                <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
-                    <div class="bg-slate-900 px-5 py-3 border-b border-slate-800 flex items-center justify-between">
-                        <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider font-mono">⚡ PROMPT: Sequência Didática Avançada (Livro + CRMG)</span>
-                        <button onclick="copyPrompt('prompt-nb1')" class="text-xs bg-emerald-950 text-emerald-400 border border-emerald-800 px-2.5 py-1 rounded hover:bg-emerald-900 transition-colors flex items-center gap-1 font-mono">
-                            <i data-lucide="copy" class="w-3.5 h-3.5"></i> COPIAR PROMPT
-                        </button>
+            <!-- Grid de Duas Colunas: Teoria na Esquerda, Prompts na Direita -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Coluna Esquerda: Análise Pedagógica, Dicas e Cuidados -->
+                <div class="lg:col-span-1 space-y-6">
+                    <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-4">
+                        <h4 class="font-bold text-lg text-rose-600 flex items-center gap-2">
+                            <i data-lucide="award"></i> Vocação Principal
+                        </h4>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            O NotebookLM brilha quando o professor carrega materiais específicos (como o livro didático adotado na EEFPA e o PDF oficial do **Currículo Referência de Minas Gerais - CRMG**). Ele cruza os dois de forma cirúrgica.
+                        </p>
                     </div>
-                    <div class="p-0">
-                        <pre id="prompt-nb1" class="text-sm text-green-400 whitespace-pre-wrap font-mono bg-black p-5 overflow-x-auto leading-relaxed">*(Instrução: Faça o upload do PDF do Livro Didático e do PDF do CRMG nesta fonte do NotebookLM)*
+
+                    <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-3">
+                        <h4 class="font-bold text-sm text-slate-900 flex items-center gap-1.5">
+                            <i data-lucide="lightbulb" class="text-amber-500"></i> Dica do Prof. Ailton
+                        </h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Ideal para criar **atividades de pesquisa no próprio livro**. Como ele lê a numeração das páginas com perfeição, use-o para gerar roteiros onde os alunos são desafiados a abrir a apostila e caçar conceitos.
+                        </p>
+                    </div>
+
+                    <div class="bg-red-50 p-6 rounded-xl border border-red-200 space-y-2">
+                        <h4 class="font-bold text-sm text-red-800 flex items-center gap-1">
+                            <i data-lucide="shield-alert"></i> Cuidado Importante
+                        </h4>
+                        <p class="text-xs text-red-900 leading-relaxed">
+                            Para garantir segurança metodológica, faça sempre perguntas direcionadas com termos como *"baseando-se estritamente nas fontes anexas"*. Isso impede que ele busque dados genéricos fora dos seus PDFs.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Coluna Direita: Prompts Avançados (Terminal Retro) -->
+                <div class="lg:col-span-2 space-y-6">
+                    <h3 class="font-bold text-xl text-slate-900 flex items-center gap-2">
+                        <i data-lucide="terminal" class="text-rose-500"></i> Prompts Prontos de Alta Performance
+                    </h3>
+
+                    <!-- Prompt 1 -->
+                    <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+                        <div class="bg-slate-900 px-5 py-3 border-b border-slate-800 flex items-center justify-between">
+                            <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider font-mono">⚡ MODELO 1: Sequência Didática (Livro + CRMG)</span>
+                            <button onclick="copyPrompt('prompt-nb1')" class="text-xs bg-emerald-950 text-emerald-400 border border-emerald-800 px-2.5 py-1 rounded hover:bg-emerald-900 transition-colors flex items-center gap-1 font-mono">
+                                <i data-lucide="copy" class="w-3.5 h-3.5"></i> COPIAR
+                            </button>
+                        </div>
+                        <div class="p-0">
+                            <pre id="prompt-nb1" class="text-sm text-green-400 whitespace-pre-wrap font-mono bg-black p-5 overflow-x-auto leading-relaxed max-h-96">*(Instrução: Faça o upload do PDF do Livro Didático e do PDF do CRMG nesta fonte do NotebookLM)*
 
 Aja como um designer pedagógico experiente. Baseando-se estritamente nas fontes anexadas, elabore uma Sequência Didática completa de [INSERIR NÚMERO] aulas para a matéria de [DISCIPLINA], focando no conteúdo das páginas [X] até [Y] do livro didático.
 
@@ -234,27 +348,30 @@ Para esta sequência, estruturada aula por aula, forneça:
 2. Roteiro para Slides: Tópicos principais para eu projetar em sala.
 3. Sugestões Multimídia: Ideias de vídeos e temas para áudios/podcasts didáticos que aprofundem o tema.
 4. Perguntas Norteadoras: 3 perguntas reflexivas baseadas nas páginas estudadas.</pre>
+                        </div>
                     </div>
-                </div>
 
-                <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
-                    <div class="bg-slate-900 px-5 py-3 border-b border-slate-800 flex items-center justify-between">
-                        <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider font-mono">⚡ PROMPT: Criação de Atividades de Pesquisa no Livro</span>
-                        <button onclick="copyPrompt('prompt-nb2')" class="text-xs bg-emerald-950 text-emerald-400 border border-emerald-800 px-2.5 py-1 rounded hover:bg-emerald-900 transition-colors flex items-center gap-1 font-mono">
-                            <i data-lucide="copy" class="w-3.5 h-3.5"></i> COPIAR PROMPT
-                        </button>
-                    </div>
-                    <div class="p-0">
-                        <pre id="prompt-nb2" class="text-sm text-green-400 whitespace-pre-wrap font-mono bg-black p-5 overflow-x-auto leading-relaxed">Com base única e exclusivamente no livro didático anexado, gere uma lista com 5 questões de fixação e interpretação de texto para os estudantes responderem pesquisando diretamente no livro.
+                    <!-- Prompt 2 -->
+                    <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+                        <div class="bg-slate-900 px-5 py-3 border-b border-slate-800 flex items-center justify-between">
+                            <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider font-mono">⚡ MODELO 2: Atividades de Pesquisa Direcionada</span>
+                            <button onclick="copyPrompt('prompt-nb2')" class="text-xs bg-emerald-950 text-emerald-400 border border-emerald-800 px-2.5 py-1 rounded hover:bg-emerald-900 transition-colors flex items-center gap-1 font-mono">
+                                <i data-lucide="copy" class="w-3.5 h-3.5"></i> COPIAR
+                            </button>
+                        </div>
+                        <div class="p-0">
+                            <pre id="prompt-nb2" class="text-sm text-green-400 whitespace-pre-wrap font-mono bg-black p-5 overflow-x-auto leading-relaxed max-h-96">Com base única e exclusivamente no livro didático anexado, gere uma lista com 5 questões de fixação e interpretação de texto para os estudantes responderem pesquisando diretamente no livro.
 
 Cada questão deve conter um trecho/citação exata retirada das páginas [INSERIR INTERVALO DE PÁGINAS] para que os estudantes analisem. 
 
 Ao final, forneça o gabarito detalhado para o professor, indicando expressamente o número da página e o parágrafo exato onde a resposta correta se encontra no material impresso.</pre>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- ================= PÁGINA: GEMINI ================= -->
         <section id="gemini" class="tab-content space-y-8">
             <div class="border-b border-slate-200 pb-5">
                 <div class="flex items-center gap-3">
@@ -266,16 +383,54 @@ Ao final, forneça o gabarito detalhado para o professor, indicando expressament
                 </div>
             </div>
 
-            <div class="space-y-6">
-                <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
-                    <div class="bg-slate-900 px-5 py-3 border-b border-slate-800 flex items-center justify-between">
-                        <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider font-mono">⚡ PROMPT: Preenchimento de Tabelas e Modelos de Planejamento</span>
-                        <button onclick="copyPrompt('prompt-gem1')" class="text-xs bg-emerald-950 text-emerald-400 border border-emerald-800 px-2.5 py-1 rounded hover:bg-emerald-900 transition-colors flex items-center gap-1 font-mono">
-                            <i data-lucide="copy" class="w-3.5 h-3.5"></i> COPIAR PROMPT
-                        </button>
+            <!-- Grid de Duas Colunas -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Coluna Esquerda: Análise Pedagógica, Dicas e Cuidados -->
+                <div class="lg:col-span-1 space-y-6">
+                    <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-4">
+                        <h4 class="font-bold text-lg text-blue-600 flex items-center gap-2">
+                            <i data-lucide="award"></i> Vocação Principal
+                        </h4>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            O Gemini é um excelente motor de organização de dados estruturados. Destaca-se por processar comandos complexos e convertê-los em tabelas limpas em Markdown.
+                        </p>
                     </div>
-                    <div class="p-0">
-                        <pre id="prompt-gem1" class="text-sm text-green-400 whitespace-pre-wrap font-mono bg-black p-5 overflow-x-auto leading-relaxed">Atue como um assessor pedagógico especializado na estruturação de dados. Eu preciso preencher um planejamento no formato exato de tabela exigido pela minha instituição.
+
+                    <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-3">
+                        <h4 class="font-bold text-sm text-slate-900 flex items-center gap-1.5">
+                            <i data-lucide="lightbulb" class="text-amber-500"></i> Dica do Prof. Ailton
+                        </h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Use-o para preencher e organizar os **Modelos de Planejamento em Tabelas** exigidos pela coordenação da escola. Ele economiza horas ao adequar as metodologias às diretrizes oficiais do CRMG.
+                        </p>
+                    </div>
+
+                    <div class="bg-red-50 p-6 rounded-xl border border-red-200 space-y-2">
+                        <h4 class="font-bold text-sm text-red-800 flex items-center gap-1">
+                            <i data-lucide="shield-alert"></i> Cuidado Importante
+                        </h4>
+                        <p class="text-xs text-red-900 leading-relaxed">
+                            Por ter um perfil mais conversacional, evite pedir que ele crie cronogramas muito específicos slide a slide. Deixe-o focado em formatações de tabelas de conteúdos.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Coluna Direita: Prompts -->
+                <div class="lg:col-span-2 space-y-6">
+                    <h3 class="font-bold text-xl text-slate-900 flex items-center gap-2">
+                        <i data-lucide="terminal" class="text-blue-500"></i> Prompts Prontos de Alta Performance
+                    </h3>
+
+                    <!-- Prompt 1 -->
+                    <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+                        <div class="bg-slate-900 px-5 py-3 border-b border-slate-800 flex items-center justify-between">
+                            <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider font-mono">⚡ MODELO 1: Preenchimento de Tabelas de Planejamento</span>
+                            <button onclick="copyPrompt('prompt-gem1')" class="text-xs bg-emerald-950 text-emerald-400 border border-emerald-800 px-2.5 py-1 rounded hover:bg-emerald-900 transition-colors flex items-center gap-1 font-mono">
+                                <i data-lucide="copy" class="w-3.5 h-3.5"></i> COPIAR
+                            </button>
+                        </div>
+                        <div class="p-0">
+                            <pre id="prompt-gem1" class="text-sm text-green-400 whitespace-pre-wrap font-mono bg-black p-5 overflow-x-auto leading-relaxed max-h-96">Atue como um assessor pedagógico especializado na estruturação de dados. Eu preciso preencher um planejamento no formato exato de tabela exigido pela minha instituição.
 
 Vou te fornecer o tema e as diretrizes básicas. Quero que você processe a resposta organizando-a em uma TABELA Markdown perfeitamente alinhada.
 
@@ -286,18 +441,19 @@ A tabela gerada deve conter estritamente as seguintes colunas horizontais:
 | Conteúdo Programático | Habilidade CRMG (Código e Descrição) | Metodologia Detalhada | Recursos Didáticos | Critérios de Avaliação |
 
 Preencha cada linha com profundidade metodológica prática voltada para a sala de aula real.</pre>
+                        </div>
                     </div>
-                </div>
 
-                <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
-                    <div class="bg-slate-900 px-5 py-3 border-b border-slate-800 flex items-center justify-between">
-                        <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider font-mono">⚡ PROMPT: Adequação Estrita de Habilidade BNCC/CRMG</span>
-                        <button onclick="copyPrompt('prompt-gem2')" class="text-xs bg-emerald-950 text-emerald-400 border border-emerald-800 px-2.5 py-1 rounded hover:bg-emerald-900 transition-colors flex items-center gap-1 font-mono">
-                            <i data-lucide="copy" class="w-3.5 h-3.5"></i> COPIAR PROMPT
-                        </button>
-                    </div>
-                    <div class="p-0">
-                        <pre id="prompt-gem2" class="text-sm text-green-400 whitespace-pre-wrap font-mono bg-black p-5 overflow-x-auto leading-relaxed">Quero desenhar uma atividade avaliativa teórica. A referência norteadora obrigatória é a seguinte habilidade do CRMG/BNCC: [COLE O CÓDIGO E O TEXTO DA HABILIDADE AQUI].
+                    <!-- Prompt 2 -->
+                    <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+                        <div class="bg-slate-900 px-5 py-3 border-b border-slate-800 flex items-center justify-between">
+                            <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider font-mono">⚡ MODELO 2: Adequação de Habilidades CRMG</span>
+                            <button onclick="copyPrompt('prompt-gem2')" class="text-xs bg-emerald-950 text-emerald-400 border border-emerald-800 px-2.5 py-1 rounded hover:bg-emerald-900 transition-colors flex items-center gap-1 font-mono">
+                                <i data-lucide="copy" class="w-3.5 h-3.5"></i> COPIAR
+                            </button>
+                        </div>
+                        <div class="p-0">
+                            <pre id="prompt-gem2" class="text-sm text-green-400 whitespace-pre-wrap font-mono bg-black p-5 overflow-x-auto leading-relaxed max-h-96">Quero desenhar uma atividade avaliativa teórica. A referência norteadora obrigatória é a seguinte habilidade do CRMG/BNCC: [COLE O CÓDIGO E O TEXTO DA HABILIDADE AQUI].
 
 Gere uma proposta pedagógica que respeite integralmente os limites dessa habilidade, sem avançar em tópicos não previstos e sem simplificar demais. 
 
@@ -305,11 +461,13 @@ A estrutura deve conter:
 1. O objetivo central da atividade baseado no verbo da habilidade.
 2. Uma proposta de dinâmica prática reflexiva.
 3. Critérios claros para atribuição de notas alinhados com o desenvolvimento esperado dessa competência.</pre>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- ================= PÁGINA: DEEPSEEK ================= -->
         <section id="deepseek" class="tab-content space-y-8">
             <div class="border-b border-slate-200 pb-5">
                 <div class="flex items-center gap-3">
@@ -321,16 +479,54 @@ A estrutura deve conter:
                 </div>
             </div>
 
-            <div class="space-y-6">
-                <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
-                    <div class="bg-slate-900 px-5 py-3 border-b border-slate-800 flex items-center justify-between">
-                        <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider font-mono">⚡ PROMPT: Resumo Estruturado de Livro em Tópicos</span>
-                        <button onclick="copyPrompt('prompt-deep1')" class="text-xs bg-emerald-950 text-emerald-400 border border-emerald-800 px-2.5 py-1 rounded hover:bg-emerald-900 transition-colors flex items-center gap-1 font-mono">
-                            <i data-lucide="copy" class="w-3.5 h-3.5"></i> COPIAR PROMPT
-                        </button>
+            <!-- Grid de Duas Colunas -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Coluna Esquerda: Análise Pedagógica, Dicas e Cuidados -->
+                <div class="lg:col-span-1 space-y-6">
+                    <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-4">
+                        <h4 class="font-bold text-lg text-teal-600 flex items-center gap-2">
+                            <i data-lucide="award"></i> Vocação Principal
+                        </h4>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            O DeepSeek destaca-se pelo processamento lógico frio. É o melhor modelo para extrair resumos estruturados de livros em poucos segundos e auditar problemas técnicos.
+                        </p>
                     </div>
-                    <div class="p-0">
-                        <pre id="prompt-deep1" class="text-sm text-green-400 whitespace-pre-wrap font-mono bg-black p-5 overflow-x-auto leading-relaxed">Você é um processador analítico de textos de alto desempenho. Colei abaixo um capítulo inteiro/conteúdo extenso extraído de um livro pedagógico. 
+
+                    <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-3">
+                        <h4 class="font-bold text-sm text-slate-900 flex items-center gap-1.5">
+                            <i data-lucide="lightbulb" class="text-amber-500"></i> Dica do Prof. Ailton
+                        </h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Utilize o seu leitor visual para **corrigir redações e questões abertas**. Cole a resposta do aluno e os critérios de correção para obter notas, detecção de erros ortográficos e feedbacks humanizados detalhados.
+                        </p>
+                    </div>
+
+                    <div class="bg-red-50 p-6 rounded-xl border border-red-200 space-y-2">
+                        <h4 class="font-bold text-sm text-red-800 flex items-center gap-1">
+                            <i data-lucide="shield-alert"></i> Cuidado Importante
+                        </h4>
+                        <p class="text-xs text-red-900 leading-relaxed">
+                            Como o DeepSeek tem um raciocínio lógico forte (modo "Thinking"), evite utilizá-lo para prompts abstratos sem delimitação. Forneça sempre regras lógicas estruturadas de início ao fim.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Coluna Direita: Prompts -->
+                <div class="lg:col-span-2 space-y-6">
+                    <h3 class="font-bold text-xl text-slate-900 flex items-center gap-2">
+                        <i data-lucide="terminal" class="text-teal-500"></i> Prompts Prontos de Alta Performance
+                    </h3>
+
+                    <!-- Prompt 1 -->
+                    <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+                        <div class="bg-slate-900 px-5 py-3 border-b border-slate-800 flex items-center justify-between">
+                            <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider font-mono">⚡ MODELO 1: Resumo Estruturado em Segundos</span>
+                            <button onclick="copyPrompt('prompt-deep1')" class="text-xs bg-emerald-950 text-emerald-400 border border-emerald-800 px-2.5 py-1 rounded hover:bg-emerald-900 transition-colors flex items-center gap-1 font-mono">
+                                <i data-lucide="copy" class="w-3.5 h-3.5"></i> COPIAR
+                            </button>
+                        </div>
+                        <div class="p-0">
+                            <pre id="prompt-deep1" class="text-sm text-green-400 whitespace-pre-wrap font-mono bg-black p-5 overflow-x-auto leading-relaxed max-h-96">Você é um processador analítico de textos de alto desempenho. Colei abaixo um capítulo inteiro/conteúdo extenso extraído de um livro pedagógico. 
 
 Em segundos, filtre o excesso de jargões e sintetize este conteúdo criando tópicos hierárquicos estruturados (Bullets). 
 
@@ -343,18 +539,19 @@ Texto:
 '''
 [COLE O TEXTO DO LIVRO AQUI]
 '''</pre>
+                        </div>
                     </div>
-                </div>
 
-                <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
-                    <div class="bg-slate-900 px-5 py-3 border-b border-slate-800 flex items-center justify-between">
-                        <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider font-mono">⚡ PROMPT: Assistente de Correção de Questões Abertas e Redações</span>
-                        <button onclick="copyPrompt('prompt-deep2')" class="text-xs bg-emerald-950 text-emerald-400 border border-emerald-800 px-2.5 py-1 rounded hover:bg-emerald-900 transition-colors flex items-center gap-1 font-mono">
-                            <i data-lucide="copy" class="w-3.5 h-3.5"></i> COPIAR PROMPT
-                        </button>
-                    </div>
-                    <div class="p-0">
-                        <pre id="prompt-deep2" class="text-sm text-green-400 whitespace-pre-wrap font-mono bg-black p-5 overflow-x-auto leading-relaxed">Atue como um corretor rigoroso e humanizado de avaliações escolares. Abaixo vou te fornecer o enunciado de uma questão aberta/redação, o critério de correção esperado e a resposta manuscrita digitada de um estudante.
+                    <!-- Prompt 2 -->
+                    <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+                        <div class="bg-slate-900 px-5 py-3 border-b border-slate-800 flex items-center justify-between">
+                            <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider font-mono">⚡ MODELO 2: Correção Dinâmica de Avaliação e Redação</span>
+                            <button onclick="copyPrompt('prompt-deep2')" class="text-xs bg-emerald-950 text-emerald-400 border border-emerald-800 px-2.5 py-1 rounded hover:bg-emerald-900 transition-colors flex items-center gap-1 font-mono">
+                                <i data-lucide="copy" class="w-3.5 h-3.5"></i> COPIAR
+                            </button>
+                        </div>
+                        <div class="p-0">
+                            <pre id="prompt-deep2" class="text-sm text-green-400 whitespace-pre-wrap font-mono bg-black p-5 overflow-x-auto leading-relaxed max-h-96">Atue como um corretor rigoroso e humanizado de avaliações escolares. Abaixo vou te fornecer o enunciado de uma questão aberta/redação, o critério de correção esperado e a resposta manuscrita digitada de um estudante.
 
 Analise a resposta do estudante e me retorne uma avaliação estruturada contendo:
 1. Diagnóstico: O aluno atingiu o objetivo conceitual? O que ele esqueceu de citar?
@@ -369,24 +566,28 @@ Resposta do Estudante:
                     </div>
                 </div>
 
-                <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+                <!-- Prompt 3 (OCR) -->
+                <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden lg:col-span-3">
                     <div class="bg-slate-900 px-5 py-3 border-b border-slate-800 flex items-center justify-between">
-                        <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider font-mono">⚡ PROMPT: Digitalização, Transcrição e Correção de Imagem (OCR)</span>
+                        <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider font-mono">⚡ MODELO 3: Transcrição e Ajuste de Fotos de Livros (OCR)</span>
                         <button onclick="copyPrompt('prompt-deep3')" class="text-xs bg-emerald-950 text-emerald-400 border border-emerald-800 px-2.5 py-1 rounded hover:bg-emerald-900 transition-colors flex items-center gap-1 font-mono">
-                            <i data-lucide="copy" class="w-3.5 h-3.5"></i> COPIAR PROMPT
+                            <i data-lucide="copy" class="w-3.5 h-3.5"></i> COPIAR
                         </button>
                     </div>
                     <div class="p-0">
-                        <pre id="prompt-deep3" class="text-sm text-green-400 whitespace-pre-wrap font-mono bg-black p-5 overflow-x-auto leading-relaxed">*(Instrução: Faça o upload da FOTO do texto antigo ou da página do livro antes de rodar o prompt)*
+                        <pre id="prompt-deep3" class="text-sm text-green-400 whitespace-pre-wrap font-mono bg-black p-5 overflow-x-auto leading-relaxed max-h-96">*(Instrução: Faça o upload da FOTO do texto antigo ou da página do livro antes de rodar o prompt)*
 
 Analise detalhadamente a imagem anexada. Execute as seguintes tarefas sequenciais:
 1. Transcreva integralmente o texto contido na imagem para formato digital limpo, corrigindo falhas de hifinização ou quebras de linha automáticas.
 2. Identifique se existem erros lógicos, ortográficos antigos ou ambiguidades conceituais no enunciado original impresso.
 3. Forneça uma versão atualizada e melhorada deste mesmo texto para aplicação segura em avaliações contemporâneas.</pre>
+                    </div>
                 </div>
+
             </div>
         </section>
 
+        <!-- ================= PÁGINA: CHATGPT ================= -->
         <section id="chatgpt" class="tab-content space-y-8">
             <div class="border-b border-slate-200 pb-5">
                 <div class="flex items-center gap-3">
@@ -398,36 +599,75 @@ Analise detalhadamente a imagem anexada. Execute as seguintes tarefas sequenciai
                 </div>
             </div>
 
-            <div class="space-y-6">
-                <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
-                    <div class="bg-slate-900 px-5 py-3 border-b border-slate-800 flex items-center justify-between">
-                        <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider font-mono">⚡ PROMPT: Geração de Imagem Conceitual (Filosofia ou Informática)</span>
-                        <button onclick="copyPrompt('prompt-gpt1')" class="text-xs bg-emerald-950 text-emerald-400 border border-emerald-800 px-2.5 py-1 rounded hover:bg-emerald-900 transition-colors flex items-center gap-1 font-mono">
-                            <i data-lucide="copy" class="w-3.5 h-3.5"></i> COPIAR PROMPT
-                        </button>
+            <!-- Grid de Duas Colunas -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Coluna Esquerda: Análise Pedagógica, Dicas e Cuidados -->
+                <div class="lg:col-span-1 space-y-6">
+                    <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-4">
+                        <h4 class="font-bold text-lg text-emerald-600 flex items-center gap-2">
+                            <i data-lucide="award"></i> Vocação Principal
+                        </h4>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            O ChatGPT é excelente para responder a dúvidas genéricas de informática ou conceitos históricos da filosofia, além de possuir uma excelente inteligência geradora de imagens conceituais.
+                        </p>
                     </div>
-                    <div class="p-0">
-                        <pre id="prompt-gpt1" class="text-sm text-green-400 whitespace-pre-wrap font-mono bg-black p-5 overflow-x-auto leading-relaxed">Utilize o DALL-E para criar uma imagem didática de alto impacto visual para estudantes da escola básica. 
+
+                    <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-3">
+                        <h4 class="font-bold text-sm text-slate-900 flex items-center gap-1.5">
+                            <i data-lucide="lightbulb" class="text-amber-500"></i> Dica do Prof. Ailton
+                        </h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Aproveite o gerador integrado da OpenAI para criar **ilustrações conceituais**. Por exemplo, represente visualmente o conceito filosófico de Platão conectado ao mundo digital atual.
+                        </p>
+                    </div>
+
+                    <div class="bg-red-50 p-6 rounded-xl border border-red-200 space-y-2">
+                        <h4 class="font-bold text-sm text-red-800 flex items-center gap-1">
+                            <i data-lucide="shield-alert"></i> Cuidado Importante
+                        </h4>
+                        <p class="text-xs text-red-900 leading-relaxed">
+                            Evite pedir correção de dados numéricos muito extensos. Deixe-o focado em brainstorming, esquemas gerais e visualização ilustrada.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Coluna Direita: Prompts -->
+                <div class="lg:col-span-2 space-y-6">
+                    <h3 class="font-bold text-xl text-slate-900 flex items-center gap-2">
+                        <i data-lucide="terminal" class="text-emerald-500"></i> Prompts Prontos de Alta Performance
+                    </h3>
+
+                    <!-- Prompt 1 -->
+                    <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+                        <div class="bg-slate-900 px-5 py-3 border-b border-slate-800 flex items-center justify-between">
+                            <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider font-mono">⚡ MODELO 1: Geração de Imagem Conceitual</span>
+                            <button onclick="copyPrompt('prompt-gpt1')" class="text-xs bg-emerald-950 text-emerald-400 border border-emerald-800 px-2.5 py-1 rounded hover:bg-emerald-900 transition-colors flex items-center gap-1 font-mono">
+                                <i data-lucide="copy" class="w-3.5 h-3.5"></i> COPIAR
+                            </button>
+                        </div>
+                        <div class="p-0">
+                            <pre id="prompt-gpt1" class="text-sm text-green-400 whitespace-pre-wrap font-mono bg-black p-5 overflow-x-auto leading-relaxed max-h-96">Utilize o DALL-E para criar uma imagem didática de alto impacto visual para estudantes da escola básica. 
 
 Quero uma ilustração detalhada que represente visualmente o conceito filosófico de [EX: O Mito da Caverna de Platão contextualizado em uma era de smartphones e redes sociais]. 
 
 Estilo Técnico: Vetorial limpo ou arte digital de traço firme, cores vibrantes, composição centralizada. Não adicione textos legíveis, palavras soltas ou letras deformadas. A imagem deve ser autoexplicativa e servir como plano de fundo de abertura para um slide de aula.</pre>
-                    </div>
-                </div>
-
-                <div class="bg-slate-900 rounded-xl border border-slate-800 shadow-md p-6 text-white space-y-4">
-                    <h3 class="text-xl font-bold text-emerald-400 flex items-center gap-2 font-mono">
-                        <i data-lucide="layout" class="w-5 h-5"></i> 📑 Criador de Provas Baseado no Seu Modelo Padrão
-                    </h3>
-                    <p class="text-sm text-slate-300">
-                        Use o prompt abaixo no ChatGPT ou DeepSeek para que ele crie avaliações novas seguindo exatamente a identidade e a formatação estrutural das suas provas tradicionais.
-                    </p>
-                    <div class="bg-black rounded-lg border border-slate-800 overflow-hidden">
-                        <div class="bg-slate-950 px-4 py-2 border-b border-slate-800 flex items-center justify-between">
-                            <span class="text-xs font-mono text-emerald-400">PROMPT DE CLONAGEM DE MODELO DE PROVA</span>
-                            <button onclick="copyPrompt('prompt-modelo-prova')" class="text-xs bg-emerald-950 text-emerald-400 border border-emerald-800 px-2 py-0.5 rounded font-mono hover:bg-emerald-900">COPIAR</button>
                         </div>
-                        <pre id="prompt-modelo-prova" class="text-xs sm:text-sm text-green-400 whitespace-pre-wrap font-mono p-4 leading-relaxed">Atue como um elaborador técnico de exames escolares. Eu quero que você crie questões inéditas sobre o tema [INSIRA O TEMA], contendo trechos para interpretação baseados em livros didáticos. 
+                    </div>
+
+                    <!-- Bloco Modelo de Prova Padrão -->
+                    <div class="bg-slate-900 rounded-xl border border-slate-800 shadow-md p-6 text-white space-y-4">
+                        <h3 class="text-xl font-bold text-emerald-400 flex items-center gap-2 font-mono">
+                            <i data-lucide="layout" class="w-5 h-5"></i> 📑 Criador de Provas Baseado no Seu Modelo Padrão
+                        </h3>
+                        <p class="text-sm text-slate-300">
+                            Use o prompt abaixo para que a IA crie avaliações novas seguindo exatamente a identidade e a formatação estrutural das suas provas tradicionais da escola.
+                        </p>
+                        <div class="bg-black rounded-lg border border-slate-800 overflow-hidden">
+                            <div class="bg-slate-950 px-4 py-2 border-b border-slate-800 flex items-center justify-between">
+                                <span class="text-xs font-mono text-emerald-400">PROMPT DE CLONAGEM DE MODELO DE PROVA</span>
+                                <button onclick="copyPrompt('prompt-modelo-prova')" class="text-xs bg-emerald-950 text-emerald-400 border border-emerald-800 px-2 py-0.5 rounded font-mono hover:bg-emerald-900">COPIAR</button>
+                            </div>
+                            <pre id="prompt-modelo-prova" class="text-xs sm:text-sm text-green-400 whitespace-pre-wrap font-mono p-4 leading-relaxed">Atue como um elaborador técnico de exames escolares. Eu quero que você crie questões inéditas sobre o tema [INSIRA O TEMA], contendo trechos para interpretação baseados em livros didáticos. 
 
 CRÍTICO: Você deve formatar e organizar as perguntas seguindo RIGOROSAMENTE a estrutura do modelo padrão que vou colar abaixo delimitado por três aspas (respeite a ordem dos enunciados, estilo de numeração e variação de tipos de questão como V/F, múltipla escolha ou aberta).
 
@@ -435,32 +675,72 @@ Meu Modelo de Prova Padrão para você clonar:
 '''
 [COLE AQUI UM EXEMPLO DE PROVA QUE VOCÊ JÁ TEM PRONTA, COM O SEU ESTILO DE CABEÇALHO E ESTRUTURA]
 '''</pre>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- ================= PÁGINA: MANUS IA ================= -->
         <section id="manus" class="tab-content space-y-8">
             <div class="border-b border-slate-200 pb-5">
                 <div class="flex items-center gap-3">
                     <span class="p-3 bg-violet-50 text-manus rounded-xl"><i data-lucide="wand-2" class="w-8 h-8"></i></span>
                     <div>
                         <h2 class="text-3xl font-extrabold text-slate-900">Manus IA</h2>
-                        <p class="text-slate-600">Roteirização precisa de conteúdos e resumos limpos estruturados para migração direta para o Google Apresentações.</p>
+                        <p class="text-slate-600">Agente de IA autônomo. Roteirização precisa de conteúdos e resumos estruturados para apresentações.</p>
                     </div>
                 </div>
             </div>
 
-            <div class="space-y-6">
-                <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
-                    <div class="bg-slate-900 px-5 py-3 border-b border-slate-800 flex items-center justify-between">
-                        <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider font-mono">⚡ PROMPT: Roteiro Estrito de Slides para Google Apresentações</span>
-                        <button onclick="copyPrompt('prompt-man1')" class="text-xs bg-emerald-950 text-emerald-400 border border-emerald-800 px-2.5 py-1 rounded hover:bg-emerald-900 transition-colors flex items-center gap-1 font-mono">
-                            <i data-lucide="copy" class="w-3.5 h-3.5"></i> COPIAR PROMPT
-                        </button>
+            <!-- Grid de Duas Colunas -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Coluna Esquerda: Análise Pedagógica, Dicas e Cuidados -->
+                <div class="lg:col-span-1 space-y-6">
+                    <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-4">
+                        <h4 class="font-bold text-lg text-violet-600 flex items-center gap-2">
+                            <i data-lucide="award"></i> Vocação Principal
+                        </h4>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            O Manus destaca-se por agir de forma autônoma como um agente de busca web. Consegue estruturar resumos completos e roteiros sequenciais de slides a partir de um documento enviado.
+                        </p>
                     </div>
-                    <div class="p-0">
-                        <pre id="prompt-man1" class="text-sm text-green-400 whitespace-pre-wrap font-mono bg-black p-5 overflow-x-auto leading-relaxed">Aja como um designer instrucional de alta precisão. Vou anexar/colar um texto de conteúdo científico básico. Preciso que você crie um roteiro estruturado focado na transposição deste material para o Google Apresentações.
+
+                    <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-3">
+                        <h4 class="font-bold text-sm text-slate-900 flex items-center gap-1.5">
+                            <i data-lucide="lightbulb" class="text-amber-500"></i> Dica do Prof. Ailton
+                        </h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Excelente para **estruturar apresentações para o Google Apresentações**. Use o seu roteiro slide a slide (que já define títulos, tópicos curtos e notas do orador) para fazer edições rápidas no ecossistema escolar do Google.
+                        </p>
+                    </div>
+
+                    <div class="bg-red-50 p-6 rounded-xl border border-red-200 space-y-2">
+                        <h4 class="font-bold text-sm text-red-800 flex items-center gap-1">
+                            <i data-lucide="shield-alert"></i> Cuidado Importante
+                        </h4>
+                        <p class="text-xs text-red-900 leading-relaxed">
+                            Exija que ele liste as fontes reais com URLs ativos ao fazer compilações. Caso contrário, ele pode gerar referências inexistentes.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Coluna Direita: Prompts -->
+                <div class="lg:col-span-2 space-y-6">
+                    <h3 class="font-bold text-xl text-slate-900 flex items-center gap-2">
+                        <i data-lucide="terminal" class="text-violet-500"></i> Prompts Prontos de Alta Performance
+                    </h3>
+
+                    <!-- Prompt 1 -->
+                    <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+                        <div class="bg-slate-900 px-5 py-3 border-b border-slate-800 flex items-center justify-between">
+                            <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider font-mono">⚡ MODELO 1: Roteiro Estrito de Slides para PowerPoint/Google Slides</span>
+                            <button onclick="copyPrompt('prompt-man1')" class="text-xs bg-emerald-950 text-emerald-400 border border-emerald-800 px-2.5 py-1 rounded hover:bg-emerald-900 transition-colors flex items-center gap-1 font-mono">
+                                <i data-lucide="copy" class="w-3.5 h-3.5"></i> COPIAR
+                            </button>
+                        </div>
+                        <div class="p-0">
+                            <pre id="prompt-man1" class="text-sm text-green-400 whitespace-pre-wrap font-mono bg-black p-5 overflow-x-auto leading-relaxed max-h-96">Aja como um designer instrucional de alta precisão. Vou anexar/colar um texto de conteúdo científico básico. Preciso que você crie um roteiro estruturado focado na transposição deste material para o Google Apresentações.
 
 Gere o planejamento do roteiro dividindo o conteúdo em [INSERIR NÚMERO] slides. 
 
@@ -468,11 +748,13 @@ Para cada slide, exiba a resposta neste formato fixo e limpo:
 - SLIDE [Nº]: [Título Direto]
 - TEXTO DO SLIDE: No máximo 3 tópicos (bullets) em frases curtas e diretas (perfeito para não poluir a tela do projetor e permitir edições fáceis).
 - NOTAS DO EXPOSITOR: Guia com o que o professor deve explicar oralmente ao fixar este slide.</pre>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- ================= PÁGINA: COPILOT ================= -->
         <section id="copilot" class="tab-content space-y-8">
             <div class="border-b border-slate-200 pb-5">
                 <div class="flex items-center gap-3">
@@ -484,16 +766,54 @@ Para cada slide, exiba a resposta neste formato fixo e limpo:
                 </div>
             </div>
 
-            <div class="space-y-6">
-                <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
-                    <div class="bg-slate-900 px-5 py-3 border-b border-slate-800 flex items-center justify-between">
-                        <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider font-mono">⚡ PROMPT: Revisão Ortográfica e Ajuste Fino de Linguagem</span>
-                        <button onclick="copyPrompt('prompt-cop1')" class="text-xs bg-emerald-950 text-emerald-400 border border-emerald-800 px-2.5 py-1 rounded hover:bg-emerald-900 transition-colors flex items-center gap-1 font-mono">
-                            <i data-lucide="copy" class="w-3.5 h-3.5"></i> COPIAR PROMPT
-                        </button>
+            <!-- Grid de Duas Colunas -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Coluna Esquerda: Análise Pedagógica, Dicas e Cuidados -->
+                <div class="lg:col-span-1 space-y-6">
+                    <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-4">
+                        <h4 class="font-bold text-lg text-sky-600 flex items-center gap-2">
+                            <i data-lucide="award"></i> Vocação Principal
+                        </h4>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            O Copilot é um refinador de textos e orador integrado de primeira linha. Excelente para corrigir a coesão de textos acadêmicos autorais.
+                        </p>
                     </div>
-                    <div class="p-0">
-                        <pre id="prompt-cop1" class="text-sm text-green-400 whitespace-pre-wrap font-mono bg-black p-5 overflow-x-auto leading-relaxed">Atue como um revisor linguístico profissional de materiais escolares didáticos. Analise o texto autoral que vou colar abaixo focado nos seguintes pilares de refinamento:
+
+                    <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-3">
+                        <h4 class="font-bold text-sm text-slate-900 flex items-center gap-1.5">
+                            <i data-lucide="lightbulb" class="text-amber-500"></i> Dica do Prof. Ailton
+                        </h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Gosto do Copilot para **conversar por comandos de voz**. É excelente para debater um tema enquanto preparo os eixos temáticos e obter ideias de termos para as aulas da EJA.
+                        </p>
+                    </div>
+
+                    <div class="bg-red-50 p-6 rounded-xl border border-red-200 space-y-2">
+                        <h4 class="font-bold text-sm text-red-800 flex items-center gap-1">
+                            <i data-lucide="shield-alert"></i> Cuidado Importante
+                        </h4>
+                        <p class="text-xs text-red-900 leading-relaxed">
+                            Pode ser mais lento que os concorrentes se submeter textos extremamente longos. Prefira parágrafos específicos.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Coluna Direita: Prompts -->
+                <div class="lg:col-span-2 space-y-6">
+                    <h3 class="font-bold text-xl text-slate-900 flex items-center gap-2">
+                        <i data-lucide="terminal" class="text-sky-500"></i> Prompts Prontos de Alta Performance
+                    </h3>
+
+                    <!-- Prompt 1 -->
+                    <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+                        <div class="bg-slate-900 px-5 py-3 border-b border-slate-800 flex items-center justify-between">
+                            <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider font-mono">⚡ MODELO 1: Polimento Linguístico de Conteúdo</span>
+                            <button onclick="copyPrompt('prompt-cop1')" class="text-xs bg-emerald-950 text-emerald-400 border border-emerald-800 px-2.5 py-1 rounded hover:bg-emerald-900 transition-colors flex items-center gap-1 font-mono">
+                                <i data-lucide="copy" class="w-3.5 h-3.5"></i> COPIAR
+                            </button>
+                        </div>
+                        <div class="p-0">
+                            <pre id="prompt-cop1" class="text-sm text-green-400 whitespace-pre-wrap font-mono bg-black p-5 overflow-x-auto leading-relaxed max-h-96">Atue como um revisor linguístico profissional de materiais escolares didáticos. Analise o texto autoral que vou colar abaixo focado nos seguintes pilares de refinamento:
 
 1. Correção Gramatical: Ajuste erros de pontuação, regência e acentuação de acordo com a norma Culta.
 2. Fluidez de Leitura: Reescreva trechos truncados mantendo a densidade técnica original, mas melhorando a coesão geral.
@@ -503,11 +823,13 @@ Texto para análise:
 '''
 [COLE SEU TEXTO AQUI]
 '''</pre>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- ================= PÁGINA: INFOGRÁFICOS ================= -->
         <section id="infograficos" class="tab-content space-y-8">
             <div class="border-b border-slate-200 pb-5">
                 <div class="flex items-center gap-3">
@@ -519,8 +841,10 @@ Texto para análise:
                 </div>
             </div>
 
+            <!-- Grid de Infográficos -->
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 
+                <!-- Imagem 01 -->
                 <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
                     <div>
                         <div class="relative group cursor-zoom-in bg-slate-100" onclick="openLightbox('https://raw.githubusercontent.com/AiltonRock22/ia-professores/refs/heads/main/01.png', '🧠 Como Estruturar um Prompt de Qualidade')">
@@ -532,7 +856,7 @@ Texto para análise:
                         <div class="p-6 space-y-3">
                             <h3 class="font-extrabold text-lg text-slate-900">🧠 Como Estruturar um Prompt de Qualidade</h3>
                             <p class="text-sm text-slate-600 leading-relaxed">
-                                Esta imagem apresenta, de forma prática e visual, os principais elements para criar prompts mais claros, completos e eficientes ao utilizar Inteligência Artificial.
+                                Esta imagem apresenta, de forma prática e visual, os principais elementos para criar prompts mais claros, completos e eficientes ao utilizar Inteligência Artificial.
                             </p>
                         </div>
                     </div>
@@ -543,6 +867,7 @@ Texto para análise:
                     </div>
                 </div>
 
+                <!-- Imagem 02 -->
                 <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
                     <div>
                         <div class="relative group cursor-zoom-in bg-slate-100" onclick="openLightbox('https://raw.githubusercontent.com/AiltonRock22/ia-professores/refs/heads/main/02.png', '💡 10 Coisas que Todo Professor Deveria Saber Sobre Prompts')">
@@ -565,6 +890,7 @@ Texto para análise:
                     </div>
                 </div>
 
+                <!-- Imagem 03 -->
                 <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
                     <div>
                         <div class="relative group cursor-zoom-in bg-slate-100" onclick="openLightbox('https://raw.githubusercontent.com/AiltonRock22/ia-professores/refs/heads/main/03.png', '⚠️ Usar IA é Poderoso. Usar com Consciência é Transformador!')">
@@ -590,6 +916,7 @@ Texto para análise:
             </div>
         </section>
 
+        <!-- ================= PÁGINA: COMPARTILHAR ================= -->
         <section id="compartilhar" class="tab-content space-y-8">
             <div class="border-b border-slate-200 pb-5">
                 <div class="flex items-center gap-3">
@@ -629,6 +956,7 @@ Texto para análise:
             </div>
         </section>
 
+        <!-- ================= PÁGINA: ÉTICA, CUIDADOS & TCCs ================= -->
         <section id="cuidados" class="tab-content space-y-8">
             <div class="border-b border-slate-200 pb-5">
                 <div class="flex items-center gap-3">
@@ -641,6 +969,7 @@ Texto para análise:
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- LGPD -->
                 <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm space-y-4">
                     <h4 class="font-bold text-lg text-slate-900 flex items-center gap-2">
                         <i data-lucide="lock" class="text-red-600"></i> Proteção de Dados (LGPD na Escola)
@@ -653,6 +982,7 @@ Texto para análise:
                     </p>
                 </div>
 
+                <!-- Mudança de Avaliação -->
                 <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm space-y-4">
                     <h4 class="font-bold text-lg text-slate-900 flex items-center gap-2">
                         <i data-lucide="refresh-cw" class="text-eduBlue-600"></i> Repensando as Avaliações
@@ -665,38 +995,40 @@ Texto para análise:
                     </p>
                 </div>
 
+                <!-- IA EM TCCs E ARTIGOS -->
                 <div class="bg-slate-900 p-6 sm:p-8 rounded-xl border border-slate-800 shadow-lg space-y-5 md:col-span-2 text-white">
                     <h4 class="font-bold text-xl text-emerald-400 flex items-center gap-2 border-b border-slate-700 pb-3">
-                        <i data-lucide="graduation-cap" class="text-emerald-400"></i> Uso de IA em Trabalhos Acadêmicos e TCCs (Permitido vs. Plágio)
+                        <i data-lucide="graduation-cap" class="text-emerald-400"></i> Uso de IA em Trabalhos Acadêmicos, Artigos e TCCs (Permitido vs. Plágio)
                     </h4>
                     
                     <p class="text-sm text-slate-300 leading-relaxed">
-                        Utilizar ferramentas de IA como assistentes durante a confecção de monografias, TCCs e artigos acadêmicos **é amplamente aceito hoje**, <strong class="text-white bg-emerald-500/20 px-1">desde que seja feito com total transparência e declarado explicitamente na metodologia</strong>.
+                        Utilizar ferramentas de IA como assistentes durante a confecção de monografias, TCCs e artigos acadêmicos **é amplamente aceito hoje pela comunidade científica internacional**, <strong class="text-white bg-emerald-500/20 px-1">desde que seja feito com total transparência e declarado explicitamente na metodologia do trabalho</strong>. A omissão do uso configura plágio e má conduta acadêmica.
                     </p>
 
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
                         <div class="bg-slate-800/50 p-4 rounded-lg border border-slate-700">
                             <h5 class="text-emerald-400 font-bold mb-2 flex items-center gap-1"><i data-lucide="check-circle" class="w-4 h-4"></i> Uso Correto (Apoio Metodológico)</h5>
                             <ul class="list-disc list-inside text-xs text-slate-300 space-y-2 ml-2">
-                                <li>Revisão gramatical e aprimoramento de coesão/coerência do texto de sua autoria.</li>
-                                <li>Tradução de resumos (Abstract) para línguas estrangeiras.</li>
-                                <li>Auxílio para debater e estruturar o esqueleto de tópicos (sumário provisório).</li>
+                                <li>Revisão ortográfica, estilística e aprimoramento de coesão/coerência do texto de sua própria autoria.</li>
+                                <li>Tradução de resumos (Abstract) para línguas estrangeiras ou normatizações gramaticais.</li>
+                                <li>Auxílio metodológico para estruturar o esqueleto/sumário provisório do trabalho académico.</li>
                             </ul>
                         </div>
                         
                         <div class="bg-slate-800/50 p-4 rounded-lg border border-slate-700">
                             <h5 class="text-rose-400 font-bold mb-2 flex items-center gap-1"><i data-lucide="x-circle" class="w-4 h-4"></i> Uso Proibido (Má Conduta)</h5>
                             <ul class="list-disc list-inside text-xs text-slate-300 space-y-2 ml-2">
-                                <li>Geração integral de parágrafos teóricos e revisão bibliográfica sem autoria humana.</li>
-                                <li>Invenção de dados de pesquisa de campo, entrevistas ou estatísticas fictícias via IA.</li>
+                                <li>Geração integral de referências de literatura ou capítulos inteiros por ferramentas de IA generativa.</li>
+                                <li>Invenção de estatísticas de campo, criação de tabelas fictícias ou dados de entrevistas automatizados.</li>
+                                <li>Cópia de citações sem leitura manual prévia e verificação integral das fontes bibliográficas primárias.</li>
                             </ul>
                         </div>
                     </div>
 
                     <div class="mt-4 bg-slate-800 p-4 rounded-lg border border-slate-700">
-                        <h5 class="text-white font-bold text-sm mb-2">Exemplo de Declaração de Uso de IA para a Metodologia:</h5>
+                        <h5 class="text-white font-bold text-sm mb-2">Exemplo Padrão de Declaração de Uso de IA para Metodologia / TCC:</h5>
                         <p class="text-xs text-slate-450 italic font-mono bg-black p-3 rounded border border-slate-800 text-green-400">
-                            "Declaramos para os devidos fins de integridade acadêmica que, durante a elaboração deste trabalho, a ferramenta de Inteligência Artificial ChatGPT foi utilizada exclusivamente com as finalidades de apoio à revisão ortográfica e estilística do texto de autoria própria dos pesquisadores. Todo o conteúdo conceitual e analítico foi gerado e validado inteiramente por inteligência humana."
+                            "Declaramos para os devidos fins de transparência e integridade científica que, durante o desenvolvimento deste trabalho académico, utilizou-se a ferramenta de Inteligência Artificial [ChatGPT-4] como assistente de suporte metodológico. A ferramenta foi aplicada exclusivamente nas tarefas de refinamento estilístico, revisão ortográfica e formatação de referências. Todo o conteúdo argumentativo, a pesquisa teórica primária e a revisão de literatura foram executados, validados e assumidos inteiramente por inteligência de autoria humana."
                         </p>
                     </div>
                 </div>
@@ -706,6 +1038,7 @@ Texto para análise:
 
     </main>
 
+    <!-- LIGHTBOX / VISUALIZADOR DE IMAGENS -->
     <div id="lightbox" class="fixed inset-0 bg-slate-950/90 z-[100] hidden items-center justify-center p-4 sm:p-6 transition-all duration-300 backdrop-blur-sm" onclick="closeLightbox()">
         <button class="absolute top-5 right-5 text-white/80 hover:text-white bg-slate-800/80 p-2.5 rounded-full hover:bg-slate-700 transition-all focus:outline-none" onclick="event.stopPropagation(); closeLightbox()">
             <i data-lucide="x" class="w-6 h-6"></i>
@@ -721,6 +1054,7 @@ Texto para análise:
         </div>
     </div>
 
+    <!-- RODAPÉ -->
     <footer class="bg-slate-100 border-t border-slate-200 mt-12 py-8 text-center text-slate-600">
         <div class="max-w-7xl mx-auto px-4">
             <p class="text-sm font-semibold">🎓 Escola Estadual Felício Pereira de Araújo (EEFPA)</p>
@@ -729,6 +1063,7 @@ Texto para análise:
         </div>
     </footer>
 
+    <!-- LÓGICA EM JAVASCRIPT -->
     <script>
         function switchTab(tabId) {
             const contents = document.querySelectorAll('.tab-content');
