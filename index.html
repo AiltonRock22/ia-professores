@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-PT">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -52,7 +52,7 @@
             <!-- Logo e Título -->
             <div class="flex items-center gap-3 cursor-pointer select-none" onclick="switchTab('inicio')">
                 <div class="relative w-12 h-12 rounded-full overflow-hidden bg-white flex items-center justify-center border-2 border-white shrink-0">
-                    <!-- Link definitivo do GitHub fornecido pelo Prof. Ailton -->
+                    <!-- Link definitivo do GitHub raw fornecido pelo Prof. Ailton -->
                     <img src="https://raw.githubusercontent.com/AiltonRock22/ia-professores/refs/heads/main/logo_fel%C3%ADcio%20(265%20x%20256%20px).png" alt="Logo EEFPA" class="w-full h-full object-contain" onerror="this.style.display='none'; document.getElementById('logo-placeholder').style.display='flex';">
                     <div id="logo-placeholder" class="hidden absolute inset-0 bg-eduBlue-600 items-center justify-center text-white font-bold text-lg">🎓</div>
                 </div>
@@ -71,6 +71,7 @@
                 <button onclick="switchTab('notebooklm')" class="nav-btn px-2.5 py-1.5 rounded-md text-xs font-semibold text-slate-300 hover:text-white hover:bg-eduBlue-800 transition-colors shrink-0" data-tab="notebooklm">NotebookLM</button>
                 <button onclick="switchTab('deepseek')" class="nav-btn px-2.5 py-1.5 rounded-md text-xs font-semibold text-slate-300 hover:text-white hover:bg-eduBlue-800 transition-colors shrink-0" data-tab="deepseek">DeepSeek</button>
                 <button onclick="switchTab('manus')" class="nav-btn px-2.5 py-1.5 rounded-md text-xs font-semibold text-slate-300 hover:text-white hover:bg-eduBlue-800 transition-colors shrink-0" data-tab="manus">Manus IA</button>
+                <button onclick="switchTab('infograficos')" class="nav-btn px-2.5 py-1.5 rounded-md text-xs font-semibold text-slate-300 hover:text-white hover:bg-eduBlue-800 transition-colors shrink-0 text-sky-300 hover:text-sky-200" data-tab="infograficos">🖼️ Infográficos</button>
                 <button onclick="switchTab('compartilhar')" class="nav-btn px-2.5 py-1.5 rounded-md text-xs font-semibold text-slate-300 hover:text-white hover:bg-eduBlue-800 transition-colors shrink-0 text-amber-300 hover:text-amber-200" data-tab="compartilhar">✨ Compartilhar</button>
                 <button onclick="switchTab('cuidados')" class="nav-btn px-2.5 py-1.5 rounded-md text-xs font-semibold text-slate-300 hover:text-white hover:bg-eduBlue-800 transition-colors shrink-0" data-tab="cuidados">Ética & Cuidados</button>
             </nav>
@@ -90,6 +91,7 @@
             <button onclick="switchTab('notebooklm'); toggleMobileMenu()" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium hover:bg-eduBlue-800 text-slate-300 hover:text-white">NotebookLM</button>
             <button onclick="switchTab('deepseek'); toggleMobileMenu()" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium hover:bg-eduBlue-800 text-slate-300 hover:text-white">DeepSeek</button>
             <button onclick="switchTab('manus'); toggleMobileMenu()" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium hover:bg-eduBlue-800 text-slate-300 hover:text-white">Manus IA</button>
+            <button onclick="switchTab('infograficos'); toggleMobileMenu()" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium hover:bg-eduBlue-800 text-sky-300 font-bold">🖼️ Infográficos</button>
             <button onclick="switchTab('compartilhar'); toggleMobileMenu()" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium hover:bg-eduBlue-850 text-amber-300 font-bold">✨ Compartilhar Experiência</button>
             <button onclick="switchTab('cuidados'); toggleMobileMenu()" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium hover:bg-eduBlue-800 text-slate-300 hover:text-white">Ética & Cuidados</button>
         </div>
@@ -166,6 +168,22 @@
                 </div>
             </div>
 
+            <!-- Chamada para a nova área de Infográficos -->
+            <div class="bg-gradient-to-r from-sky-50 to-blue-50 rounded-xl p-6 border border-sky-200/60 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-4">
+                    <div class="p-3 bg-sky-600 text-white rounded-xl shadow-md shrink-0">
+                        <i data-lucide="image" class="w-7 h-7"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-950 text-lg">Guias e Infográficos Visuais</h4>
+                        <p class="text-slate-700 text-sm mt-1">Aceda aos resumos gráficos para aprender a estruturar prompts ideais, regras cruciais de uso ético e reflexões conscientes em sala de aula.</p>
+                    </div>
+                </div>
+                <button onclick="switchTab('infograficos')" class="bg-sky-600 hover:bg-sky-700 text-white font-bold px-6 py-3 rounded-lg shadow-md transition-all flex items-center gap-2 shrink-0">
+                    <i data-lucide="eye" class="w-5 h-5"></i> Abrir Infográficos
+                </button>
+            </div>
+
             <!-- Bloco de chamada para contribuições dos professores no início -->
             <div class="bg-gradient-to-r from-amber-50 to-orange-50 rounded-xl p-6 border border-amber-200/60 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6">
                 <div class="flex items-center gap-4">
@@ -182,7 +200,7 @@
                 </button>
             </div>
 
-            <!-- Grid de Seleção das Ferramentas com Manus IA inclusa -->
+            <!-- Grid de Seleção das Ferramentas -->
             <div class="space-y-6">
                 <h3 class="text-xl font-bold text-slate-900">Selecione uma Inteligência Artificial para Explorar:</h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -310,7 +328,7 @@
                     </div>
 
                     <div class="bg-amber-50 p-6 rounded-xl border border-amber-200">
-                        <h4 class="font-bold text-amber-900 text-base flex items-center gap-1">
+                        <h4 class="font-bold text-amber-950 text-base flex items-center gap-1">
                             <i data-lucide="alert-triangle" class="w-5 h-5 text-amber-600"></i> O que evitar:
                         </h4>
                         <p class="text-xs text-amber-950 mt-2 leading-relaxed">
@@ -383,7 +401,7 @@
                             </button>
                         </div>
                         <div class="p-5">
-                            <pre id="prompt-gemini1" class="text-sm text-slate-800 whitespace-pre-wrap font-mono bg-slate-900 text-emerald-400 p-4 rounded-lg overflow-x-auto">Preciso explicar o conceito de [CONCEITO EX: Algoritmos de busca ou Ceticismo na Filosofia] para alunos de 13 anos. Crie duas analogias do cotidiano deles (como o funcionamento do feed do TikTok ou escolha de séries no streaming) para explicar essa teoria de maneira clara e inesquecível.</pre>
+                            <pre id="prompt-gemini1" class="text-sm text-slate-800 whitespace-pre-wrap font-mono bg-slate-900 text-emerald-400 p-4 rounded-lg overflow-x-auto">Preciso explicar o concept de [CONCEITO EX: Algoritmos de busca ou Ceticismo na Filosofia] para alunos de 13 anos. Crie duas analogias do cotidiano deles (como o funcionamento do feed do TikTok ou escolha de séries no streaming) para explicar essa teoria de maneira clara e inesquecível.</pre>
                         </div>
                     </div>
                 </div>
@@ -585,7 +603,7 @@ Indique de forma lógica se há furos na pergunta, dubiedade que dê margem para
                             <i data-lucide="shield-alert" class="w-5 h-5 text-red-600"></i> Alerta Crítico (Filosofia do Cuidado):
                         </h4>
                         <p class="text-xs text-red-950 mt-2 leading-relaxed">
-                            Por agir de forma autônoma (executando sub-tarefas por conta própria), o Manus IA pode "alucinar" referências inteiras e creater fontes fictícias para justificar os dados compilados se não houver um comando estrito de verificação manual por parte do professor.
+                            Por agir de forma autônoma (executando sub-tarefas por conta própria), o Manus IA pode "alucinar" referências inteiras e criar fontes fictícias para justificar os dados compilados se não houver um comando estrito de verificação manual por parte do professor.
                         </p>
                     </div>
                 </div>
@@ -624,6 +642,93 @@ Compile o resultado em formato de tabela com as seguintes colunas:
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- ================= PÁGINA: INFOGRÁFICOS (NOVA!) ================= -->
+        <section id="infograficos" class="tab-content space-y-8">
+            <div class="border-b border-slate-200 pb-5">
+                <div class="flex items-center gap-3">
+                    <span class="p-3 bg-sky-50 text-sky-600 rounded-xl"><i data-lucide="image" class="w-8 h-8"></i></span>
+                    <div>
+                        <h2 class="text-3xl font-extrabold text-slate-900">Guias e Infográficos Visuais</h2>
+                        <p class="text-slate-600">Material visual exclusivo e explicativo para apoiar a aprendizagem docente.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Grid de Infográficos -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                
+                <!-- Imagem 01 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
+                    <div>
+                        <div class="relative group cursor-zoom-in bg-slate-100" onclick="openLightbox('https://raw.githubusercontent.com/AiltonRock22/ia-professores/refs/heads/main/01.png', '🧠 Como Estruturar um Prompt de Qualidade')">
+                            <img src="https://raw.githubusercontent.com/AiltonRock22/ia-professores/refs/heads/main/01.png" alt="Como Estruturar um Prompt de Qualidade" class="w-full h-auto object-cover max-h-[350px] group-hover:opacity-90 transition-opacity">
+                            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white font-medium text-sm gap-2">
+                                <i data-lucide="maximize-2" class="w-5 h-5"></i> Ampliar Infográfico
+                            </div>
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <h3 class="font-extrabold text-lg text-slate-900">🧠 Como Estruturar um Prompt de Qualidade</h3>
+                            <p class="text-sm text-slate-600 leading-relaxed">
+                                Esta imagem apresenta, de forma prática e visual, os principais elementos para criar prompts mais claros, completos e eficientes ao utilizar Inteligência Artificial. Os professores aprenderão como organizar pedidos, definir formatos de resposta, fornecer contexto e melhorar a qualidade das interações com ferramentas como ChatGPT, Gemini e Copilot.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="https://raw.githubusercontent.com/AiltonRock22/ia-professores/refs/heads/main/01.png" target="_blank" class="w-full bg-slate-900 hover:bg-slate-800 text-white font-bold py-2.5 px-4 rounded-xl text-xs transition-colors flex items-center justify-center gap-1.5 shadow-sm">
+                            <i data-lucide="external-link" class="w-4 h-4"></i> Ver Imagem Completa
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Imagem 02 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
+                    <div>
+                        <div class="relative group cursor-zoom-in bg-slate-100" onclick="openLightbox('https://raw.githubusercontent.com/AiltonRock22/ia-professores/refs/heads/main/02.png', '💡 10 Coisas que Todo Professor Deveria Saber Sobre Prompts')">
+                            <img src="https://raw.githubusercontent.com/AiltonRock22/ia-professores/refs/heads/main/02.png" alt="10 Coisas que Todo Professor Deveria Saber Sobre Prompts" class="w-full h-auto object-cover max-h-[350px] group-hover:opacity-90 transition-opacity">
+                            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white font-medium text-sm gap-2">
+                                <i data-lucide="maximize-2" class="w-5 h-5"></i> Ampliar Infográfico
+                            </div>
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <h3 class="font-extrabold text-lg text-slate-900">💡 10 Coisas que Todo Professor Deveria Saber</h3>
+                            <p class="text-sm text-slate-600 leading-relaxed">
+                                Um guia visual com dicas essenciais para utilizar IA de maneira mais estratégica e pedagógica. A imagem aborda desde a importância do contexto e da clareza até cuidados com informações falsas, adaptação de linguagem, formatos de resposta e uso ético da Inteligência Artificial no ambiente escolar.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="https://raw.githubusercontent.com/AiltonRock22/ia-professores/refs/heads/main/02.png" target="_blank" class="w-full bg-slate-900 hover:bg-slate-800 text-white font-bold py-2.5 px-4 rounded-xl text-xs transition-colors flex items-center justify-center gap-1.5 shadow-sm">
+                            <i data-lucide="external-link" class="w-4 h-4"></i> Ver Imagem Completa
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Imagem 03 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
+                    <div>
+                        <div class="relative group cursor-zoom-in bg-slate-100" onclick="openLightbox('https://raw.githubusercontent.com/AiltonRock22/ia-professores/refs/heads/main/03.png', '⚠️ Usar IA é Poderoso. Usar com Consciência é Transformador!')">
+                            <img src="https://raw.githubusercontent.com/AiltonRock22/ia-professores/refs/heads/main/03.png" alt="Usar IA é Poderoso. Usar com Consciência é Transformador!" class="w-full h-auto object-cover max-h-[350px] group-hover:opacity-90 transition-opacity">
+                            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white font-medium text-sm gap-2">
+                                <i data-lucide="maximize-2" class="w-5 h-5"></i> Ampliar Infográfico
+                            </div>
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <h3 class="font-extrabold text-lg text-slate-900">⚠️ Usar com Consciência é Transformador!</h3>
+                            <p class="text-sm text-slate-600 leading-relaxed">
+                                Esta imagem traz reflexões fundamentais sobre os impactos da Inteligência Artificial na educação. O material discute pensamento crítico, preguiça mental, ética, privacidade, mudanças na avaliação escolar e o papel insubstituível do professor na era digital, incentivando um uso consciente, humano e responsável da IA.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="https://raw.githubusercontent.com/AiltonRock22/ia-professores/refs/heads/main/03.png" target="_blank" class="w-full bg-slate-900 hover:bg-slate-800 text-white font-bold py-2.5 px-4 rounded-xl text-xs transition-colors flex items-center justify-center gap-1.5 shadow-sm">
+                            <i data-lucide="external-link" class="w-4 h-4"></i> Ver Imagem Completa
+                        </a>
+                    </div>
+                </div>
+
             </div>
         </section>
 
@@ -721,6 +826,22 @@ Compile o resultado em formato de tabela com as seguintes colunas:
 
     </main>
 
+    <!-- LIGHTBOX / VISUALIZADOR DE IMAGENS -->
+    <div id="lightbox" class="fixed inset-0 bg-slate-950/90 z-[100] hidden items-center justify-center p-4 sm:p-6 transition-all duration-300 backdrop-blur-sm" onclick="closeLightbox()">
+        <button class="absolute top-5 right-5 text-white/80 hover:text-white bg-slate-800/80 p-2.5 rounded-full hover:bg-slate-700 transition-all focus:outline-none" onclick="event.stopPropagation(); closeLightbox()">
+            <i data-lucide="x" class="w-6 h-6"></i>
+        </button>
+        <div class="max-w-4xl max-h-[85vh] w-full flex flex-col items-center justify-center space-y-4" onclick="event.stopPropagation()">
+            <h4 id="lightbox-title" class="text-white text-base sm:text-lg font-bold text-center tracking-wide px-4"></h4>
+            <div class="relative overflow-hidden rounded-xl bg-slate-900 border border-slate-800 max-h-[75vh] flex items-center justify-center">
+                <img id="lightbox-img" src="" alt="Ampliado" class="max-w-full max-h-[70vh] object-contain rounded-lg">
+            </div>
+            <a id="lightbox-download" href="" target="_blank" class="bg-sky-600 hover:bg-sky-700 text-white text-xs font-bold px-5 py-2.5 rounded-xl shadow-md flex items-center gap-1.5 transition-colors">
+                <i data-lucide="external-link" class="w-4 h-4"></i> Abrir Imagem de Alta Resolução
+            </a>
+        </div>
+    </div>
+
     <!-- RODAPÉ -->
     <footer class="bg-slate-100 border-t border-slate-200 mt-12 py-8 text-center text-slate-600">
         <div class="max-w-7xl mx-auto px-4">
@@ -797,6 +918,29 @@ Compile o resultado em formato de tabela com as seguintes colunas:
                 toast.classList.remove('translate-y-0', 'opacity-100');
                 toast.classList.add('translate-y-20', 'opacity-0');
             }, 3000);
+        }
+
+        // Funções do Lightbox (Visualizador Ampliado)
+        function openLightbox(imgSrc, imgTitle) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxTitle = document.getElementById('lightbox-title');
+            const lightboxDownload = document.getElementById('lightbox-download');
+
+            lightboxImg.src = imgSrc;
+            lightboxTitle.innerText = imgTitle;
+            lightboxDownload.href = imgSrc;
+
+            lightbox.classList.remove('hidden');
+            lightbox.classList.add('flex');
+            document.body.style.overflow = 'hidden'; // Bloquear rolagem do site de fundo
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.add('hidden');
+            lightbox.classList.remove('flex');
+            document.body.style.overflow = 'auto'; // Restaurar rolagem
         }
 
         // Inicializar ícones Lucide
