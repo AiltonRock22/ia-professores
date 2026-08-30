@@ -84,7 +84,6 @@
                 <button onclick="switchTab('manus')" class="nav-btn px-2.5 py-1.5 rounded-md text-xs font-semibold text-slate-300 hover:text-white hover:bg-eduBlue-800 transition-colors shrink-0" data-tab="manus">Manus IA</button>
                 <button onclick="switchTab('copilot')" class="nav-btn px-2.5 py-1.5 rounded-md text-xs font-semibold text-slate-300 hover:text-white hover:bg-eduBlue-800 transition-colors shrink-0" data-tab="copilot">Copilot</button>
                 <button onclick="switchTab('infograficos')" class="nav-btn px-2.5 py-1.5 rounded-md text-xs font-semibold text-slate-300 hover:text-white hover:bg-eduBlue-800 transition-colors shrink-0 text-sky-300 hover:text-sky-200" data-tab="infograficos">🖼️ Infográficos</button>
-                <button onclick="switchTab('compartilhar')" class="nav-btn px-2.5 py-1.5 rounded-md text-xs font-semibold text-slate-300 hover:text-white hover:bg-eduBlue-800 transition-colors shrink-0 text-amber-300 hover:text-amber-200" data-tab="compartilhar">✨ Compartilhar</button>
                 <button onclick="switchTab('cuidados')" class="nav-btn px-2.5 py-1.5 rounded-md text-xs font-semibold text-slate-300 hover:text-white hover:bg-eduBlue-800 transition-colors shrink-0" data-tab="cuidados">Ética & Cuidados</button>
             </nav>
 
@@ -102,7 +101,6 @@
             <button onclick="switchTab('manus'); toggleMobileMenu()" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium hover:bg-eduBlue-800 text-slate-300 hover:text-white">Manus IA</button>
             <button onclick="switchTab('copilot'); toggleMobileMenu()" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium hover:bg-eduBlue-800 text-slate-300 hover:text-white">Copilot</button>
             <button onclick="switchTab('infograficos'); toggleMobileMenu()" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium hover:bg-eduBlue-800 text-sky-300 font-bold">🖼️ Infográficos</button>
-            <button onclick="switchTab('compartilhar'); toggleMobileMenu()" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium hover:bg-eduBlue-850 text-amber-300 font-bold">✨ Compartilhar Experiência</button>
             <button onclick="switchTab('cuidados'); toggleMobileMenu()" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium hover:bg-eduBlue-800 text-slate-300 hover:text-white">Ética & Cuidados</button>
         </div>
     </header>
@@ -184,22 +182,6 @@
                 </div>
                 <button onclick="switchTab('infograficos')" class="bg-sky-600 hover:bg-sky-700 text-white font-bold px-6 py-3 rounded-lg shadow-md transition-all flex items-center gap-2 shrink-0">
                     <i data-lucide="eye" class="w-5 h-5"></i> Abrir Infográficos
-                </button>
-            </div>
-
-            <!-- Bloco de chamada para contribuições dos professores no início -->
-            <div class="bg-gradient-to-r from-amber-50 to-orange-50 rounded-xl p-6 border border-amber-200/60 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6">
-                <div class="flex items-center gap-4">
-                    <div class="p-3 bg-amber-500 text-white rounded-xl shadow-md shrink-0">
-                        <i data-lucide="messages-square" class="w-7 h-7"></i>
-                    </div>
-                    <div>
-                        <h4 class="font-bold text-amber-950 text-lg">Espaço Colaborativo EEFPA</h4>
-                        <p class="text-amber-900 text-sm mt-1">Querido professor, você já utilizou alguma Inteligência Artificial de forma criativa com seus alunos? Compartilhe seu exemplo para enriquecermos nosso banco de saberes!</p>
-                    </div>
-                </div>
-                <button onclick="switchTab('compartilhar')" class="bg-amber-600 hover:bg-amber-700 text-white font-bold px-6 py-3 rounded-lg shadow-md transition-all flex items-center gap-2 shrink-0">
-                    <i data-lucide="plus-circle" class="w-5 h-5"></i> Compartilhar Agora
                 </button>
             </div>
 
@@ -916,123 +898,118 @@ Texto para análise:
             </div>
         </section>
 
-        <!-- ================= PÁGINA: COMPARTILHAR ================= -->
-        <section id="compartilhar" class="tab-content space-y-8">
-            <div class="border-b border-slate-200 pb-5">
-                <div class="flex items-center gap-3">
-                    <span class="p-3 bg-amber-50 text-amber-600 rounded-xl"><i data-lucide="messages-square" class="w-8 h-8"></i></span>
-                    <div>
-                        <h2 class="text-3xl font-extrabold text-slate-900">Espaço de Partilha Pedagógica</h2>
-                        <p class="text-slate-600">Sua experiência real na EEFPA registrando ideias e usos inovadores de IA.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
-                <div class="lg:col-span-1 space-y-6">
-                    <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm space-y-4">
-                        <h4 class="font-bold text-base text-slate-900 flex items-center gap-1.5">
-                            <i data-lucide="heart" class="text-rose-500 w-5 h-5"></i> Força Coletiva
-                        </h4>
-                        <p class="text-xs text-slate-600 leading-relaxed">
-                            O saber cresce na partilha! Preencha ao lado o formulário oficial que o **Prof. Ailton** organizou para nosso mini-curso. Seus relatos serão fundamentais para consolidarmos um banco sólido de exemplos práticos em Montes Claros.
-                        </p>
-                    </div>
-                    <div class="bg-eduBlue-50 p-5 rounded-xl border border-eduBlue-200 text-center space-y-3">
-                        <p class="text-xs text-eduBlue-900 leading-relaxed font-semibold">Teve problemas com o carregamento na página?</p>
-                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfJVaolpLT1JLnuO4ZNgsrJHQPK_wI1iXKETZtQfhGilbE4Qw/viewform?usp=dialog" target="_blank" class="w-full bg-eduBlue-600 hover:bg-eduBlue-800 text-white font-bold py-2 px-4 rounded-lg text-xs transition-colors flex items-center justify-center gap-1 shadow-sm">
-                            <i data-lucide="external-link" class="w-3.5 h-3.5"></i> Abrir em nova aba
-                        </a>
-                    </div>
-                </div>
-
-                <div class="lg:col-span-3">
-                    <div class="bg-white rounded-xl border border-slate-100 shadow-sm overflow-hidden p-2 sm:p-4">
-                        <div class="w-full relative" style="padding-top: 130%; min-height: 800px;">
-                            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfJVaolpLT1JLnuO4ZNgsrJHQPK_wI1iXKETZtQfhGilbE4Qw/viewform?embedded=true" class="absolute inset-0 w-full h-full border-0 rounded-lg bg-slate-50" allowfullscreen>Carregando formulário oficial da EEFPA...</iframe>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <!-- ================= PÁGINA: ÉTICA, CUIDADOS & TCCs ================= -->
         <section id="cuidados" class="tab-content space-y-8">
             <div class="border-b border-slate-200 pb-5">
                 <div class="flex items-center gap-3">
                     <span class="p-3 bg-red-50 text-red-600 rounded-xl"><i data-lucide="shield-check" class="w-8 h-8"></i></span>
                     <div>
-                        <h2 class="text-3xl font-extrabold text-slate-900">Ética, LGPD e IA em Trabalhos Acadêmicos</h2>
-                        <p class="text-slate-600">Limites, privacidade de alunos e como usar a inteligência artificial com total integridade científica.</p>
+                        <h2 class="text-3xl font-extrabold text-slate-900">Ética, privacidade e responsabilidade no uso da IA</h2>
+                        <p class="text-slate-600">Orientações filosóficas e práticas para proteger estudantes, preservar a autoria e utilizar a inteligência artificial com responsabilidade.</p>
                     </div>
                 </div>
             </div>
 
+            <div class="bg-slate-900 text-white rounded-xl p-6 sm:p-8 shadow-lg space-y-4">
+                <h3 class="text-xl font-extrabold text-amber-300 flex items-center gap-2"><i data-lucide="eye" class="w-5 h-5"></i> Por que a ética não pode ser um detalhe?</h3>
+                <p class="text-sm text-slate-300 leading-relaxed">
+                    Utilizar inteligência artificial na escola não é apenas aprender a escrever comandos. É decidir que tipo de relação com o conhecimento, com os estudantes e com a tecnologia está sendo construída. Uma ferramenta pode ampliar possibilidades de pesquisa e criação, mas também pode produzir dependência, erro, exposição e desigualdade quando é utilizada sem reflexão.
+                </p>
+                <p class="text-sm text-slate-300 leading-relaxed">
+                    A pergunta orientadora é: <strong class="text-white">a ferramenta está ampliando a autonomia intelectual ou substituindo o esforço de compreender?</strong> A resposta não está no sistema automático. Ela depende da decisão pedagógica, da verificação humana e das condições concretas da turma.
+                </p>
+            </div>
+
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- LGPD -->
+                <!-- ZUBOFF -->
                 <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm space-y-4">
-                    <h4 class="font-bold text-lg text-slate-900 flex items-center gap-2">
-                        <i data-lucide="lock" class="text-red-600"></i> Proteção de Dados (LGPD na Escola)
-                    </h4>
+                    <h4 class="font-bold text-lg text-slate-900 flex items-center gap-2"><i data-lucide="database" class="text-red-600"></i> Dados, vigilância e capitalismo</h4>
                     <p class="text-sm text-slate-600 leading-relaxed">
-                        Ao corrigir textos de alunos ou processar relatórios escolares em ferramentas abertas, lembre-se que <strong>esses dados retroalimentam o sistema mundial</strong>.
+                        Shoshana Zuboff utiliza o conceito de <strong>capitalismo de vigilância</strong> para analisar uma lógica econômica que transforma experiências e dados de uso em matéria-prima para previsão e orientação de comportamentos (ZUBOFF, 2019). O conceito não significa que cada professor ou estudante esteja sendo observado da mesma maneira, mas ajuda a perguntar o que ocorre com os dados produzidos ao utilizar plataformas digitais.
                     </p>
-                    <p class="text-sm text-slate-600 leading-relaxed font-semibold text-red-700">
-                        Regra de Ouro: Nunca submeta redações contendo nomes inteiros, documentos ou laudos psicológicos. Substitua nomes por "[Aluno A]" antes de enviar o prompt.
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        Na escola, essa reflexão exige cuidado com textos, imagens, vozes, nomes, diagnósticos, informações familiares e registros de aprendizagem. Antes de enviar qualquer material a uma ferramenta, pergunte: <strong>esse dado é realmente necessário? Quem poderá ter acesso? Existe uma alternativa sem identificação?</strong>
                     </p>
                 </div>
 
-                <!-- Mudança de Avaliação -->
+                <!-- FAUSTINO E LIPPOLD -->
                 <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm space-y-4">
-                    <h4 class="font-bold text-lg text-slate-900 flex items-center gap-2">
-                        <i data-lucide="refresh-cw" class="text-eduBlue-600"></i> Repensando as Avaliações
-                    </h4>
+                    <h4 class="font-bold text-lg text-slate-900 flex items-center gap-2"><i data-lucide="globe-2" class="text-purple-600"></i> Colonialismo digital e soberania</h4>
                     <p class="text-sm text-slate-600 leading-relaxed">
-                        O foco do docente moderno deve mudar da "entrega final do trabalho escrito em casa" para a "defesa ativa e contextualizada do conhecimento".
+                        Deivison Faustino e Walter Lippold, em <em>Colonialismo digital: por uma crítica hacker-fanoniana</em> (2023), permitem ampliar a análise para a concentração das infraestruturas, plataformas e ferramentas tecnológicas em grandes empresas e centros de poder. A questão não é apenas quem utiliza a tecnologia, mas quem controla seus recursos, seus dados, seus padrões e suas condições de funcionamento.
                     </p>
                     <p class="text-sm text-slate-600 leading-relaxed">
-                        <strong>Adaptação Prática:</strong> Traga a produção para dentro de sala de aula. Exija apresentações orais, debates socráticos e análises críticas sobre respostas geradas propositalmente por inteligência artificial.
+                        Essa perspectiva ajuda o professor a discutir desigualdades de acesso, dependência de plataformas, soberania digital, racismo e outras formas de reprodução de opressão. Não se trata de rejeitar toda tecnologia, mas de evitar que sua adoção seja apresentada como neutra, inevitável ou igualmente benéfica para todos.
                     </p>
                 </div>
 
-                <!-- IA EM TCCs E ARTIGOS -->
+                <!-- PROTEÇÃO DE DADOS -->
+                <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm space-y-4">
+                    <h4 class="font-bold text-lg text-slate-900 flex items-center gap-2"><i data-lucide="lock" class="text-red-600"></i> Proteção de dados na escola</h4>
+                    <ul class="list-disc list-inside text-sm text-slate-600 space-y-2">
+                        <li>Não inserir nomes completos, documentos, endereços, telefones, laudos, diagnósticos ou situações familiares identificáveis.</li>
+                        <li>Substituir nomes por marcadores como “[Estudante A]” e remover detalhes que permitam reconhecer a pessoa.</li>
+                        <li>Não enviar fotografias, gravações ou trabalhos identificáveis sem verificar autorização, finalidade e regras institucionais.</li>
+                        <li>Preferir exemplos fictícios ou dados anonimizados quando o objetivo pedagógico puder ser alcançado dessa forma.</li>
+                        <li>Não considerar uma plataforma gratuita como automaticamente segura ou neutra.</li>
+                    </ul>
+                    <p class="text-sm font-semibold text-red-700 leading-relaxed">Regra de ouro: se o recurso não é necessário para a atividade, não colete nem envie o dado.</p>
+                </div>
+
+                <!-- AUTONOMIA E AVALIAÇÃO -->
+                <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm space-y-4">
+                    <h4 class="font-bold text-lg text-slate-900 flex items-center gap-2"><i data-lucide="scale" class="text-amber-600"></i> Autonomia, avaliação e autoria</h4>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        O resultado gerado por uma IA não é sinônimo de conhecimento. O estudante precisa compreender, explicar, comparar, revisar e defender aquilo que apresenta. A avaliação deve observar o processo e não apenas o produto final entregue.
+                    </p>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        <strong>Adaptação prática:</strong> combine produção em sala, versões preliminares, apresentação oral, debate, justificativa das escolhas e análise crítica de respostas produzidas por IA. O objetivo não é vigiar o aluno, mas tornar visível sua aprendizagem.
+                    </p>
+                </div>
+
+                <!-- ROTEIRO DE DECISÃO -->
+                <div class="bg-eduBlue-50 p-6 rounded-xl border border-eduBlue-200 shadow-sm space-y-4 md:col-span-2">
+                    <h4 class="font-bold text-lg text-eduBlue-900 flex items-center gap-2"><i data-lucide="list-checks" class="text-eduBlue-600"></i> Roteiro ético antes de usar uma ferramenta</h4>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-sm text-slate-700">
+                        <p><strong>1. Finalidade:</strong> qual problema pedagógico a ferramenta ajudará a enfrentar?</p>
+                        <p><strong>2. Necessidade:</strong> a atividade pode ser realizada com recurso mais simples?</p>
+                        <p><strong>3. Dados:</strong> estou inserindo informações pessoais ou identificáveis?</p>
+                        <p><strong>4. Verificação:</strong> conferi fatos, fontes, vieses e possíveis erros?</p>
+                        <p><strong>5. Autoria:</strong> está claro o que foi produzido pelo estudante, pelo professor e pela ferramenta?</p>
+                        <p><strong>6. Consequências:</strong> quem pode ser prejudicado, excluído ou exposto?</p>
+                    </div>
+                </div>
+
+                <!-- IA EM TRABALHOS -->
                 <div class="bg-slate-900 p-6 sm:p-8 rounded-xl border border-slate-800 shadow-lg space-y-5 md:col-span-2 text-white">
-                    <h4 class="font-bold text-xl text-emerald-400 flex items-center gap-2 border-b border-slate-700 pb-3">
-                        <i data-lucide="graduation-cap" class="text-emerald-400"></i> Uso de IA em Trabalhos Acadêmicos, Artigos e TCCs (Permitido vs. Plágio)
-                    </h4>
-                    
+                    <h4 class="font-bold text-xl text-emerald-400 flex items-center gap-2 border-b border-slate-700 pb-3"><i data-lucide="graduation-cap" class="text-emerald-400"></i> IA em trabalhos acadêmicos</h4>
                     <p class="text-sm text-slate-300 leading-relaxed">
-                        Utilizar ferramentas de IA como assistentes durante a confecção de monografias, TCCs e artigos acadêmicos **é amplamente aceito hoje pela comunidade científica internacional**, <strong class="text-white bg-emerald-500/20 px-1">desde que seja feito com total transparência e declarado explicitamente na metodologia do trabalho</strong>. A omissão do uso configura plágio e má conduta acadêmica.
+                        Ferramentas de IA podem apoiar trabalhos acadêmicos quando seu uso é compatível com as regras da instituição e permanece sob responsabilidade humana. A simples utilização de uma ferramenta não define, sozinha, plágio. O problema está em ocultar autoria, apresentar como próprio um conteúdo não elaborado pelo estudante, inventar fontes ou deixar de verificar informações.
                     </p>
-
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
                         <div class="bg-slate-800/50 p-4 rounded-lg border border-slate-700">
-                            <h5 class="text-emerald-400 font-bold mb-2 flex items-center gap-1"><i data-lucide="check-circle" class="w-4 h-4"></i> Uso Correto (Apoio Metodológico)</h5>
+                            <h5 class="text-emerald-400 font-bold mb-2">Usos possíveis, com revisão</h5>
                             <ul class="list-disc list-inside text-xs text-slate-300 space-y-2 ml-2">
-                                <li>Revisão ortográfica, estilística e aprimoramento de coesão/coerência do texto de sua própria autoria.</li>
-                                <li>Tradução de resumos (Abstract) para línguas estrangeiras ou normatizações gramaticais.</li>
-                                <li>Auxílio metodológico para estruturar o esqueleto/sumário provisório do trabalho académico.</li>
+                                <li>Revisão ortográfica de texto próprio.</li><li>Tradução, desde que conferida.</li><li>Brainstorming e organização provisória de ideias.</li><li>Criação de exemplos para posterior análise crítica.</li>
                             </ul>
                         </div>
-                        
                         <div class="bg-slate-800/50 p-4 rounded-lg border border-slate-700">
-                            <h5 class="text-rose-400 font-bold mb-2 flex items-center gap-1"><i data-lucide="x-circle" class="w-4 h-4"></i> Uso Proibido (Má Conduta)</h5>
+                            <h5 class="text-rose-400 font-bold mb-2">Usos que comprometem a integridade</h5>
                             <ul class="list-disc list-inside text-xs text-slate-300 space-y-2 ml-2">
-                                <li>Geração integral de referências de literatura ou capítulos inteiros por ferramentas de IA generativa.</li>
-                                <li>Invenção de estatísticas de campo, criação de tabelas fictícias ou dados de entrevistas automatizados.</li>
-                                <li>Cópia de citações sem leitura manual prévia e verificação integral das fontes bibliográficas primárias.</li>
+                                <li>Inventar referências, dados ou entrevistas.</li><li>Copiar capítulos inteiros como se fossem próprios.</li><li>Usar citações sem localizar e ler a fonte.</li><li>Inserir dados identificáveis de estudantes em ferramentas abertas.</li>
                             </ul>
                         </div>
                     </div>
-
                     <div class="mt-4 bg-slate-800 p-4 rounded-lg border border-slate-700">
-                        <h5 class="text-white font-bold text-sm mb-2">Exemplo Padrão de Declaração de Uso de IA para Metodologia / TCC:</h5>
-                        <p class="text-xs text-slate-450 italic font-mono bg-black p-3 rounded border border-slate-800 text-green-400">
-                            "Declaramos para os devidos fins de transparência e integridade científica que, durante o desenvolvimento deste trabalho académico, utilizou-se a ferramenta de Inteligência Artificial [ChatGPT-4] como assistente de suporte metodológico. A ferramenta foi aplicada exclusivamente nas tarefas de refinamento estilístico, revisão ortográfica e formatação de referências. Todo o conteúdo argumentativo, a pesquisa teórica primária e a revisão de literatura foram executados, validados e assumidos inteiramente por inteligência de autoria humana."
-                        </p>
+                        <h5 class="text-white font-bold text-sm mb-2">Declaração possível, se exigida pela instituição</h5>
+                        <p class="text-xs italic font-mono bg-black p-3 rounded border border-slate-800 text-green-400">“A ferramenta de inteligência artificial [nome] foi utilizada como apoio em [finalidade]. O conteúdo foi revisado, conferido e assumido pelo autor, que permanece responsável pelas ideias, fontes, argumentos e versão final.”</p>
                     </div>
                 </div>
 
+                <div class="md:col-span-2 text-xs text-slate-500 leading-relaxed">
+                    <p><strong>Referências de apoio:</strong> ZUBOFF, Shoshana. <em>The Age of Surveillance Capitalism</em>. New York: PublicAffairs, 2019. FAUSTINO, Deivison Mendes; LIPPOLD, Walter G. R. <em>Colonialismo digital: por uma crítica hacker-fanoniana</em>. São Paulo: Boitempo, 2023.</p>
+                    <p class="mt-2">As referências fundamentam a discussão conceitual. As regras de privacidade, uso de plataformas e declaração de IA devem ser conferidas também nas normas da escola, da instituição de ensino e no manual acadêmico aplicável.</p>
+                </div>
             </div>
         </section>
 
